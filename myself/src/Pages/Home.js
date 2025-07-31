@@ -78,9 +78,15 @@ function Home() {
           {tagline}
         </h2>
       </div>
-      <div className="mt-5 md:mt-0">
-        <img ref={myimageref} className="w-1/2 md:ml-auto" src={img} alt="Nitesh" />
-      </div>
+<div className="mt-5 md:mt-0 flex justify-center md:justify-end">
+  <img
+    ref={myimageref}
+    className="w-40 h-40 md:w-52 md:h-52 object-cover rounded-full shadow-lg border-4 border-white"
+    src={img}
+    alt="Nitesh"
+  />
+</div>
+
     </main>
   );
 }
