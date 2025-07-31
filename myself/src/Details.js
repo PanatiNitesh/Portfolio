@@ -36,7 +36,7 @@ export const logos = {
 // Enter your Personal Details here
 export const personalDetails = {
   name: "Nitesh",
-  tagline: "From concept to code — full-stack with purpose",
+  tagline: "Bringing ideas to life, one full stack at a time",
   img: profile,
   about: "I'm a passionate full-stack developer with hands-on experience in frontend, backend, and UI/UX design. I enjoy building responsive and user-centric web applications, backed by clean architecture and data-driven decisions. With a growing interest in data analysis and product design, I love turning ideas into scalable digital solutions and leading projects from concept to launch."
 };
@@ -68,7 +68,7 @@ export const eduDetails = [
     Position: "Diploma in Computer Science Engineering",
     Company: "RJS Polytechnic",
     Location: "Bengaluru",
-    Duration: "2019 - 2024",
+    Duration: "2021 - 2024",
     Score: "CGPA: 9.1"
   },
   {
@@ -159,6 +159,6 @@ project lorem ipsum generator for dummy content`,
 
 // Enter your Contact Details here
 export const contactDetails = {
-  email: "hi@example.com",
+  email: "niteshreddy242005@gmail.com",
   phone: "+91 12345 67890",
 };
