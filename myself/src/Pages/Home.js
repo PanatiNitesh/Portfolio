@@ -81,7 +81,7 @@ function Home() {
 <div className="mt-5 md:mt-0 flex justify-center md:justify-end">
   <img
     ref={myimageref}
-    className="w-40 h-40 md:w-52 md:h-52 object-cover rounded-full shadow-lg border-4 border-white"
+    className="w-45 h-45 md:w-52 md:h-52 object-cover rounded-full shadow-lg border-4 border-white"
     src={img}
     alt="Nitesh"
   />

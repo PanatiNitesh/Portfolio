@@ -36,61 +36,50 @@ export const logos = {
 // Enter your Personal Details here
 export const personalDetails = {
   name: "Nitesh",
-  tagline: "I build things for web",
+  tagline: "From concept to code — full-stack with purpose",
   img: profile,
-  about: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`,
+  about: "I'm a passionate full-stack developer with hands-on experience in frontend, backend, and UI/UX design. I enjoy building responsive and user-centric web applications, backed by clean architecture and data-driven decisions. With a growing interest in data analysis and product design, I love turning ideas into scalable digital solutions and leading projects from concept to launch."
 };
+
 
 // Enter your Social Media URLs here
 export const socialMediaUrl = {
-  linkdein: "https://www.linkedin.com/",
-  github: "https://www.github.com/",
-  twitter: "https://twitter.com/",
-  instagram: "https://www.instagram.com/",
+  linkdein: "https://www.linkedin.com/in/nitesh-reddy-dev/",
+  github: "https://github.com/PanatiNitesh/",
+  twitter: "https://x.com/Nitesh_Reddy_",
+  instagram: "https://www.instagram.com/nitesh_reddy_/",
 };
 
 // Enter your Work Experience here
 export const workDetails = [
-  {
-    Position: "Frontend Web Developer",
-    Company: `Company Name here`,
-    Location: "Bengaluru",
-    Type: "Full Time",
-    Duration: "Sep 2021 - Dec 2021",
-  },
+ 
   {
     Position: "Internship",
-    Company: `Company Name here`,
+    Company: `JB PORTALS`,
     Location: "Bengaluru",
     Type: "Internship",
-    Duration: "Sep 2021 - Dec 2021",
-  },
-  {
-    Position: "Internship",
-    Company: `Company Name here`,
-    Location: "Bengaluru",
-    Type: "Internship",
-    Duration: "Sep 2021 - Dec 2021",
+    Duration: "jan 2024 - Apr 2024",
   },
 ];
 
 // Enter your Education Details here
 export const eduDetails = [
   {
-    Position: "Frontend Development",
-    Company: "Udemy, YouTube, Google, Medium",
-    Location: "Online",
-    Type: "Full Time",
-    Duration: "Jan 2022 - Present",
+    Position: "Diploma in Computer Science Engineering",
+    Company: "RJS Polytechnic",
+    Location: "Bengaluru",
+    Duration: "2019 - 2024",
+    Score: "CGPA: 9.1"
   },
   {
-    Position: "Bachelor in Electronics & Communication",
-    Company: `Your College Name here`,
+    Position: "B.E. in Computer Science and Engineering (Data Science)",
+    Company: "Bangalore Institute of Technology",
     Location: "Bengaluru",
-    Type: "Full Time",
-    Duration: "Aug 2020 - Present",
-  },
+    Duration: "2024 - 2027 (Pursuing)",
+    Score: "CGPA: 8.45 (Current)"
+  }
 ];
+
 
 // Tech Stack and Tools
 export const techStackDetails = {
