@@ -57,19 +57,12 @@ function Home() {
   }, []);
 
   return (
-   <main className="container mx-auto max-width section md:flex justify-between items-center">
+  <main className="container mx-auto max-width section md:flex justify-between items-center">
   <div>
-  
+    {/* Combined greeting, name, and emoji in one line */}
     <h1
-      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold"
       ref={h11}
-    >
-      Hi, 👋
-    </h1>
-
-    
-    <h1
-      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold"
+      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold"
     >
       I'm{" "}
       <span
@@ -77,20 +70,17 @@ function Home() {
         className="bg-clip-text bg-gradient text-transparent"
       >
         {name}
-      </span>
+      </span>{" "}
+      👋
     </h1>
-
-   
+    {/* Tagline below */}
     <h2
       ref={h13}
-      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold"
+      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold"
     >
       {tagline}
     </h2>
   </div>
-
-
-
 <div className="mt-5 md:mt-0 flex justify-center md:justify-end">
   <img
     ref={myimageref}
