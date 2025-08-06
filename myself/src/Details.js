@@ -36,9 +36,9 @@ export const logos = {
 // Enter your Personal Details here
 export const personalDetails = {
   name: "Nitesh",
-  tagline: "Full-Stack. Full Power",
+  tagline: "Ideas Into Action",
   img: profile,
-  about: "I'm a passionate full-stack developer with hands-on experience in frontend, backend, and UI/UX design. I enjoy building responsive and user-centric web applications, backed by clean architecture and data-driven decisions. With a growing interest in data analysis and product design, I love turning ideas into scalable digital solutions and leading projects from concept to launch."
+  about: "I'm a passionate full-stack developer with hands-on experience in frontend, backend, and UI/UX design. I love crafting responsive, user-centric web applications built on clean architecture and scalable code. With a growing interest in data analysis and product design, I enjoy transforming ideas into impactful digital solutions and driving projects from concept to launch."
 };
 
 
