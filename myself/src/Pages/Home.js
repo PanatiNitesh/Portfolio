@@ -57,13 +57,21 @@ function Home() {
   }, []);
 
   return (
-    <main className="container mx-auto max-width section md:flex justify-between items-center">
+   <main className="container mx-auto max-width section md:flex justify-between items-center">
   <div>
+  
     <h1
+      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold"
       ref={h11}
-      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold"
     >
-      Hi, 👋 I'm{" "}
+      Hi, 👋
+    </h1>
+
+    
+    <h1
+      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold"
+    >
+      I'm{" "}
       <span
         ref={h12}
         className="bg-clip-text bg-gradient text-transparent"
@@ -71,13 +79,17 @@ function Home() {
         {name}
       </span>
     </h1>
+
+   
     <h2
       ref={h13}
-      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl xl:leading-tight font-bold"
+      className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold"
     >
       {tagline}
     </h2>
   </div>
+
+
 
 <div className="mt-5 md:mt-0 flex justify-center md:justify-end">
   <img
