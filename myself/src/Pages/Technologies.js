@@ -1,65 +1,52 @@
 import React, { useState } from "react";
-import { techStackDetails } from "../Details";
+import { technologies } from "../Details";
+import { FaWrench } from "react-icons/fa";
 
-function Technologies() {
-  const categories = {
-    Languages: ["python", "c", "java"],
-    Web: ["react", "next", "js", "node", "express", "html", "css", "tailwind", "mongodb"],
-    Tools: ["vscode", "git", "github", "npm", "postman", "figma", "canva", "docker"],
-  };
+function Technology() {
+  const [category, setCategory] = useState("Web");
 
-  const [active, setActive] = useState("Languages");
-
-  const renderCards = (keys) =>
-    keys.map((key, i) => {
-      const { src, title } = techStackDetails[key];
-      return (
-        <div
-          key={i}
-          className="flex flex-col items-center p-5 bg-white/10 dark:bg-black/20 backdrop-blur-md rounded-xl border border-gray-300/10 dark:border-white/10 shadow-lg transition-all duration-300 hover:scale-105"
-        >
-          <img
-            src={src}
-            alt={title}
-            className="h-14 w-14 object-contain"
-            onError={(e) => (e.target.style.display = "none")}
-          />
-          <p className="mt-3 text-sm font-medium text-center text-dark-subtext dark:text-light-subtext">
-            {title}
-          </p>
-        </div>
-      );
-    });
+  const categories = ["Languages", "Web", "Tools"];
 
   return (
-    <main className="container mx-auto px-4 py-16">
-      <h1 className="text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 mb-12">
-        🛠️ Technologies I Use
-      </h1>
+    <section className="container mx-auto px-4 py-16 max-w-6xl text-center">
+      <FaWrench className="text-4xl text-blue-500 mx-auto mb-3 animate-spin-slow" />
+      <h1 className="text-3xl font-bold text-blue-400 mb-4">Technologies I Use</h1>
 
       {/* Tabs */}
-      <div className="flex justify-center gap-4 mb-10 flex-wrap">
-        {Object.keys(categories).map((key) => (
+      <div className="flex justify-center space-x-4 mb-10">
+        {categories.map((cat) => (
           <button
-            key={key}
-            onClick={() => setActive(key)}
-            className={`px-5 py-2 rounded-full border-2 font-medium transition-all ${
-              active === key
-                ? "bg-blue-500 text-white border-blue-500 shadow-lg"
-                : "bg-transparent text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white"
+            key={cat}
+            onClick={() => setCategory(cat)}
+            className={`px-5 py-2 rounded-full border-2 font-medium transition ${
+              category === cat
+                ? "bg-blue-500 text-white border-blue-500"
+                : "border-blue-400 text-blue-400 hover:bg-blue-500 hover:text-white"
             }`}
           >
-            {key}
+            {cat}
           </button>
         ))}
       </div>
 
-      {/* Tech Cards */}
-      <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-        {renderCards(categories[active])}
-      </section>
-    </main>
+      {/* Tech Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        {technologies[category].map((tech, index) => (
+          <div
+            key={index}
+            className="bg-dark-secondary p-5 rounded-lg shadow hover:scale-105 transition duration-300 border border-gray-600"
+          >
+            <img
+              src={tech.icon}
+              alt={tech.name}
+              className="w-12 h-12 mx-auto mb-2 object-contain"
+            />
+            <p className="text-white font-semibold">{tech.name}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }
 
-export default Technologies;
+export default Technology;
