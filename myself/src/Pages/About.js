@@ -1,41 +1,61 @@
 import React from "react";
+import Work from "../Components/Work";
 import { personalDetails, workDetails, eduDetails } from "../Details";
-import { FaUserAstronaut } from "react-icons/fa";
 
 function About() {
   return (
-    <main className="container mx-auto px-4 py-16 max-w-6xl text-light-paragraph dark:text-white">
-      <section className="text-center mb-12">
-        <FaUserAstronaut className="text-4xl mx-auto mb-4 text-blue-500 animate-pulse" />
-        <h1 className="text-4xl font-bold dark:text-blue-400">About Me</h1>
-        <p className="text-lg mt-4 dark:text-gray-300">
-          Hello! I’m <span className="font-semibold text-blue-400">{personalDetails.name}</span>, a passionate developer
-          with a background in {personalDetails.background}. I enjoy turning complex problems into
-          simple, beautiful solutions.
+    <main className="container mx-auto px-6 pt-16 pb-24">
+      {/* About Me Section */}
+      <section className="mb-16">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-dark-heading dark:text-light-heading mb-6 tracking-tight">
+          ✨ About Me
+        </h1>
+        <p className="text-lg text-content text-center leading-relaxed max-w-3xl mx-auto">
+          {personalDetails.about}
         </p>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-8 mb-12">
-        <div className="bg-dark-secondary p-6 rounded-xl shadow-md border border-blue-500">
-          <h2 className="text-xl font-semibold text-blue-400 mb-2">Education</h2>
-          {eduDetails.map((edu, index) => (
-            <div key={index}>
-              <h3 className="font-medium">{edu.degree}</h3>
-              <p className="text-sm text-gray-400">{edu.institution}</p>
-              <p className="text-sm">{edu.year}</p>
-            </div>
-          ))}
+      {/* Work Experience Section */}
+      <section className="mb-16">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-dark-heading dark:text-light-heading mb-10 tracking-tight">
+          💼 Work Experience
+        </h1>
+        <div className="space-y-8">
+          {React.Children.toArray(
+            workDetails.map(({ Position, Company, Location, Type, Duration }) => (
+              <div className="bg-white/80 dark:bg-[#1f1f1f]/80 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                <Work
+                  position={Position}
+                  company={Company}
+                  location={Location}
+                  type={Type}
+                  duration={Duration}
+                />
+              </div>
+            ))
+          )}
         </div>
+      </section>
 
-        <div className="bg-dark-secondary p-6 rounded-xl shadow-md border border-blue-500">
-          <h2 className="text-xl font-semibold text-blue-400 mb-2">Work Experience</h2>
-          {workDetails.map((work, index) => (
-            <div key={index}>
-              <h3 className="font-medium">{work.role}</h3>
-              <p className="text-sm text-gray-400">{work.company}</p>
-              <p className="text-sm">{work.duration}</p>
-            </div>
-          ))}
+      {/* Education Section */}
+      <section>
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-dark-heading dark:text-light-heading mb-10 tracking-tight">
+          🎓 Education
+        </h1>
+        <div className="space-y-8">
+          {React.Children.toArray(
+            eduDetails.map(({ Position, Company, Location, Type, Duration }) => (
+              <div className="bg-white/80 dark:bg-[#1f1f1f]/80 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                <Work
+                  position={Position}
+                  company={Company}
+                  location={Location}
+                  duration={Duration}
+                  {...(Type && { type: Type })}
+                />
+              </div>
+            ))
+          )}
         </div>
       </section>
     </main>
