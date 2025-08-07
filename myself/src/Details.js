@@ -83,7 +83,7 @@ export const eduDetails = [
 
 // Tech Stack and Tools
 export const techStackDetails = {
-  python: "path/python.png",
+  python: "src/techstack/python.png",
   c: "path/c.png",
   java: "path/java.png",
   react: "path/react.png",
@@ -99,7 +99,7 @@ export const techStackDetails = {
   git: "path/git.png",
   github: "path/github.png",
   npm: "path/npm.png",
-  postman: "path/postman.png",
+  postman: "src/postman.png",
   figma: "path/figma.png",
   canva: "path/canva.png",
   docker: "path/docker.png",

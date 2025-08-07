@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
 import { personalDetails } from "../Details";
 import { BsSun, BsMoon } from "react-icons/bs";
+
 function Home() {
   const { name, tagline, img } = personalDetails;
 
@@ -10,58 +11,50 @@ function Home() {
   const h13 = useRef();
   const myimageref = useRef();
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Check localStorage for saved theme on initial load
+    const storedMode = localStorage.getItem("theme");
+    return storedMode === "dark";
+  });
 
   useEffect(() => {
+    // GSAP animation
     const tl = gsap.timeline();
-    tl.from(
-      h11.current,
-      {
+    tl.from(h11.current, {
+      x: "-100%",
+      delay: 0.8,
+      opacity: 0,
+      duration: 2,
+      ease: "Power3.easeOut",
+    })
+      .from(h12.current, {
         x: "-100%",
-        delay: 0.8,
         opacity: 0,
         duration: 2,
         ease: "Power3.easeOut",
-      },
-      "<"
-    )
-      .from(
-        h12.current,
-        {
-          x: "-100%",
-          opacity: 0,
-          duration: 2,
-          ease: "Power3.easeOut",
-        },
-        "<"
-      )
-      .from(
-        h13.current,
-        {
-          x: "-100%",
-          opacity: 0,
-          duration: 2,
-          ease: "Power3.easeOut",
-        },
-        "<"
-      )
-      .from(
-        myimageref.current,
-        {
-          x: "200%",
-          opacity: 0,
-          duration: 2,
-          ease: "Power3.easeOut",
-        },
-        "<"
-      );
+      }, "<")
+      .from(h13.current, {
+        x: "-100%",
+        opacity: 0,
+        duration: 2,
+        ease: "Power3.easeOut",
+      }, "<")
+      .from(myimageref.current, {
+        x: "200%",
+        opacity: 0,
+        duration: 2,
+        ease: "Power3.easeOut",
+      }, "<");
   }, []);
 
   useEffect(() => {
+    // Apply theme to root html
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
     } else {
       document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, [isDarkMode]);
 
@@ -79,11 +72,10 @@ function Home() {
         aria-label="Toggle Dark Mode"
       >
         {isDarkMode ? (
-  <BsSun className="text-yellow-500 h-6 w-6" />
-) : (
-  <BsMoon className="text-gray-300 h-6 w-6" />
-)}
-
+          <BsSun className="text-yellow-400 h-6 w-6" title="Light Mode" />
+        ) : (
+          <BsMoon className="text-gray-500 h-6 w-6" title="Dark Mode" />
+        )}
       </button>
 
       <div>
@@ -95,7 +87,7 @@ function Home() {
           Hi 👋
         </h1>
 
-        {/* Line 2: I'm {name} (FIXED) */}
+        {/* Line 2: I'm {name} */}
         <h1
           ref={h12}
           className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold"
