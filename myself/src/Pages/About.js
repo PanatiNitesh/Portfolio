@@ -4,55 +4,49 @@ import { personalDetails, workDetails, eduDetails } from "../Details";
 
 function About() {
   return (
-    <main className="container mx-auto px-6 pt-16 pb-24">
-      {/* About Me Section */}
-      <section className="mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-dark-heading dark:text-light-heading mb-6 tracking-tight">
-          ✨ About Me
+    <main className="container mx-auto px-4 py-16">
+      {/* About Section */}
+      <section className="mb-20 text-center">
+        <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-500">
+          🚀 About Me
         </h1>
-        <p className="text-lg text-content text-center leading-relaxed max-w-3xl mx-auto">
+        <div className="mt-6 text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed backdrop-blur-lg bg-white/10 dark:bg-black/10 p-6 rounded-2xl shadow-lg">
           {personalDetails.about}
-        </p>
+        </div>
       </section>
 
-      {/* Work Experience Section */}
-      <section className="mb-16">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-dark-heading dark:text-light-heading mb-10 tracking-tight">
+      {/* Divider */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-indigo-500 to-transparent mb-16" />
+
+      {/* Work Experience */}
+      <section className="mb-20">
+        <h2 className="text-4xl font-semibold text-center text-dark-heading dark:text-light-heading mb-10">
           💼 Work Experience
-        </h1>
-        <div className="space-y-8">
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2">
           {React.Children.toArray(
-            workDetails.map(({ Position, Company, Location, Type, Duration }) => (
-              <div className="bg-white/80 dark:bg-[#1f1f1f]/80 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
-                <Work
-                  position={Position}
-                  company={Company}
-                  location={Location}
-                  type={Type}
-                  duration={Duration}
-                />
+            workDetails.map((props) => (
+              <div className="rounded-2xl bg-white/10 dark:bg-black/20 backdrop-blur-md p-5 shadow-xl border border-gray-300/10 dark:border-white/10 hover:scale-[1.02] transition-transform duration-300">
+                <Work {...props} />
               </div>
             ))
           )}
         </div>
       </section>
 
-      {/* Education Section */}
+      {/* Divider */}
+      <div className="w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mb-16" />
+
+      {/* Education */}
       <section>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-dark-heading dark:text-light-heading mb-10 tracking-tight">
+        <h2 className="text-4xl font-semibold text-center text-dark-heading dark:text-light-heading mb-10">
           🎓 Education
-        </h1>
-        <div className="space-y-8">
+        </h2>
+        <div className="grid gap-6 md:grid-cols-2">
           {React.Children.toArray(
-            eduDetails.map(({ Position, Company, Location, Type, Duration }) => (
-              <div className="bg-white/80 dark:bg-[#1f1f1f]/80 p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
-                <Work
-                  position={Position}
-                  company={Company}
-                  location={Location}
-                  duration={Duration}
-                  {...(Type && { type: Type })}
-                />
+            eduDetails.map((props) => (
+              <div className="rounded-2xl bg-white/10 dark:bg-black/20 backdrop-blur-md p-5 shadow-xl border border-gray-300/10 dark:border-white/10 hover:scale-[1.02] transition-transform duration-300">
+                <Work {...props} />
               </div>
             ))
           )}
