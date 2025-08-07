@@ -27,24 +27,31 @@ function Technologies() {
 
   const renderTechIcons = (techArray) =>
     techArray.map(({ src, title }, index) => (
-      <img
+      <div
         key={index}
-        src={src}
-        alt={title}
-        title={title}
-        className="h-14 transition-transform duration-200 hover:scale-105"
-        onError={(e) => (e.target.style.display = "none")}
-      />
+        className="flex flex-col items-center justify-center bg-white dark:bg-[#1f1f1f] p-4 rounded-xl shadow-md dark:shadow-none hover:shadow-lg transition-shadow duration-300"
+      >
+        <img
+          src={src}
+          alt={title}
+          title={title}
+          className="h-12 md:h-14 lg:h-16 object-contain transition-transform duration-300 hover:scale-110 hover:drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)]"
+          onError={(e) => (e.target.style.display = "none")}
+        />
+        <p className="text-xs mt-2 text-center text-dark-subtext dark:text-light-subtext">
+          {title}
+        </p>
+      </div>
     ));
 
   return (
-    <main className="container mx-auto max-width pt-10 pb-20">
+    <main className="container mx-auto max-width pt-10 pb-20 px-4">
       {/* Programming Languages */}
-      <section>
-        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold">
+      <section className="mb-12">
+        <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold text-center text-dark-heading dark:text-light-heading">
           Programming Languages
         </h1>
-        <div className="flex flex-wrap items-center gap-8 pt-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 pt-8">
           {renderTechIcons([
             { src: python, title: "Python" },
             { src: c, title: "C" },
@@ -54,11 +61,11 @@ function Technologies() {
       </section>
 
       {/* Web Development */}
-      <section className="pt-10">
-        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold">
+      <section className="mb-12">
+        <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold text-center text-dark-heading dark:text-light-heading">
           Web Development
         </h1>
-        <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-7 items-center gap-10 pt-6">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 pt-8">
           {renderTechIcons([
             { src: react, title: "React" },
             { src: next, title: "Next.js" },
@@ -74,11 +81,11 @@ function Technologies() {
       </section>
 
       {/* Tools */}
-      <section className="pt-10">
-        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold">
+      <section>
+        <h1 className="text-2xl md:text-4xl xl:text-5xl font-bold text-center text-dark-heading dark:text-light-heading">
           Tools
         </h1>
-        <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 items-center gap-10 pt-6">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 pt-8">
           {renderTechIcons([
             { src: vscode, title: "VS Code" },
             { src: git, title: "Git" },

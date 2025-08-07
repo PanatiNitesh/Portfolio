@@ -48,9 +48,10 @@ function Contact() {
 
       {/* Footer Message */}
       <div className="mt-12 text-sm md:text-base text-gray-500 dark:text-gray-400 italic">
-        Building cool things. Meeting cool people. <br />
-        Let’s make something awesome together 🚀
-      </div>
+  Whether it's code or conversation — I'm just a message away. <br />
+  Let's spark ideas and build something extraordinary 🚀
+</div>
+
     </main>
   );
 }
