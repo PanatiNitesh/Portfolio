@@ -1,52 +1,66 @@
 import React, { useState } from "react";
-import { technologies } from "../Details";
-import { FaWrench } from "react-icons/fa";
+import { techStackDetails } from "../Details";
 
-function Technology() {
-  const [category, setCategory] = useState("Web");
+function Technologies() {
+  const categories = {
+    Languages: ["python", "c", "java"],
+    "Web Development": ["react", "next", "mongodb", "js", "node", "express", "html", "css", "tailwind"],
+    Tools: ["vscode", "git", "github", "npm", "postman", "figma", "canva", "docker"],
+  };
 
-  const categories = ["Languages", "Web", "Tools"];
+  const [activeTab, setActiveTab] = useState("Languages");
+
+  const renderTech = (keys) =>
+    keys.map((key, i) => {
+      const { src, title } = techStackDetails[key];
+      return (
+        <div
+          key={i}
+          className="flex flex-col items-center justify-center p-4 rounded-xl backdrop-blur-md bg-white/30 dark:bg-[#1f1f1f]/40 shadow-md hover:shadow-xl transition-transform hover:scale-105"
+        >
+          <img
+            src={src}
+            alt={title}
+            title={title}
+            className="h-12 md:h-14 lg:h-16 object-contain"
+            onError={(e) => (e.target.style.display = "none")}
+          />
+          <p className="text-sm mt-2 text-center text-dark-subtext dark:text-light-subtext">
+            {title}
+          </p>
+        </div>
+      );
+    });
 
   return (
-    <section className="container mx-auto px-4 py-16 max-w-6xl text-center">
-      <FaWrench className="text-4xl text-blue-500 mx-auto mb-3 animate-spin-slow" />
-      <h1 className="text-3xl font-bold text-blue-400 mb-4">Technologies I Use</h1>
+    <main className="container mx-auto max-width pt-10 pb-20 px-6">
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-dark-heading dark:text-light-heading">
+        🧠 My Tech Stack
+      </h1>
 
-      {/* Tabs */}
-      <div className="flex justify-center space-x-4 mb-10">
-        {categories.map((cat) => (
+      {/* Tab Buttons */}
+      <div className="flex justify-center gap-4 mb-10 flex-wrap">
+        {Object.keys(categories).map((category) => (
           <button
-            key={cat}
-            onClick={() => setCategory(cat)}
-            className={`px-5 py-2 rounded-full border-2 font-medium transition ${
-              category === cat
-                ? "bg-blue-500 text-white border-blue-500"
-                : "border-blue-400 text-blue-400 hover:bg-blue-500 hover:text-white"
+            key={category}
+            onClick={() => setActiveTab(category)}
+            className={`px-4 py-2 rounded-full font-semibold border transition-all ${
+              activeTab === category
+                ? "bg-primary text-white shadow-md"
+                : "bg-transparent text-primary border-primary"
             }`}
           >
-            {cat}
+            {category}
           </button>
         ))}
       </div>
 
       {/* Tech Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {technologies[category].map((tech, index) => (
-          <div
-            key={index}
-            className="bg-dark-secondary p-5 rounded-lg shadow hover:scale-105 transition duration-300 border border-gray-600"
-          >
-            <img
-              src={tech.icon}
-              alt={tech.name}
-              className="w-12 h-12 mx-auto mb-2 object-contain"
-            />
-            <p className="text-white font-semibold">{tech.name}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+      <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        {renderTech(categories[activeTab])}
+      </section>
+    </main>
   );
 }
 
-export default Technology;
+export default Technologies;
