@@ -78,7 +78,16 @@ function Home() {
         className="absolute top-5 right-5 text-2xl p-2 rounded-full transition duration-300 hover:scale-110"
         aria-label="Toggle Dark Mode"
       >
-        {isDarkMode ? "🌞" : "🌙"}
+        {isDarkMode ? (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m8.66-11.66l-.71.71M4.05 19.95l-.71.71m16.97 0l-.71-.71M4.05 4.05l-.71-.71M21 12h1M3 12H2m10-9a9 9 0 100 18 9 9 0 000-18z" />
+  </svg>
+) : (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+  </svg>
+)}
+
       </button>
 
       <div>

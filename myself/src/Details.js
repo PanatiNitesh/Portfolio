@@ -83,21 +83,29 @@ export const eduDetails = [
 
 // Tech Stack and Tools
 export const techStackDetails = {
-  html: html,
-  css: css,
-  js: js,
-  react: react,
-  redux: redux,
-  sass: sass,
-  tailwind: tailwind,
-  bootstrap: bootstrap,
-  vscode: vscode,
-  postman: postman,
-  npm: npm,
-  git: git,
-  github: github,
-  figma: figma,
+  python: "path/python.png",
+  c: "path/c.png",
+  java: "path/java.png",
+  react: "path/react.png",
+  next: "path/next.png",
+  mongodb: "path/mongodb.png",
+  js: "path/js.png",
+  node: "path/node.png",
+  express: "path/express.png",
+  html: "path/html.png",
+  css: "path/css.png",
+  tailwind: "path/tailwind.png",
+  vscode: "path/vscode.png",
+  git: "path/git.png",
+  github: "path/github.png",
+  npm: "path/npm.png",
+  postman: "path/postman.png",
+  figma: "path/figma.png",
+  canva: "path/canva.png",
+  docker: "path/docker.png",
 };
+
+
 
 // Enter your Project Details here
 export const projectDetails = [
