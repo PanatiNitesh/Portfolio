@@ -82,27 +82,50 @@ export const eduDetails = [
 
 
 // Tech Stack and Tools
+// src/Details.js
+
+import python from "./assets/techstack/python.png";
+import c from "./assets/techstack/c.png";
+import java from "./assets/techstack/java.png";
+import react from "./assets/techstack/react.png";
+import next from "./assets/techstack/next.png";
+import mongodb from "./assets/techstack/mongodb.png";
+import js from "./assets/techstack/js.png";
+import node from "./assets/techstack/node.png";
+import express from "./assets/techstack/express.png";
+import html from "./assets/techstack/html.png";
+import css from "./assets/techstack/css.png";
+import tailwind from "./assets/techstack/tailwind.png";
+import vscode from "./assets/techstack/vscode.png";
+import git from "./assets/techstack/git.png";
+import github from "./assets/techstack/github.png";
+import npm from "./assets/techstack/npm.png";
+import postman from "./assets/techstack/postman.png";
+import figma from "./assets/techstack/figma.png";
+import canva from "./assets/techstack/canva.png";
+import docker from "./assets/techstack/docker.png";
+
 export const techStackDetails = {
-  python: "src/techstack/python.png",
-  c: "path/c.png",
-  java: "path/java.png",
-  react: "path/react.png",
-  next: "path/next.png",
-  mongodb: "path/mongodb.png",
-  js: "path/js.png",
-  node: "path/node.png",
-  express: "path/express.png",
-  html: "path/html.png",
-  css: "path/css.png",
-  tailwind: "path/tailwind.png",
-  vscode: "path/vscode.png",
-  git: "path/git.png",
-  github: "path/github.png",
-  npm: "path/npm.png",
-  postman: "src/postman.png",
-  figma: "path/figma.png",
-  canva: "path/canva.png",
-  docker: "path/docker.png",
+  python,
+  c,
+  java,
+  react,
+  next,
+  mongodb,
+  js,
+  node,
+  express,
+  html,
+  css,
+  tailwind,
+  vscode,
+  git,
+  github,
+  npm,
+  postman,
+  figma,
+  canva,
+  docker,
 };
 
 
