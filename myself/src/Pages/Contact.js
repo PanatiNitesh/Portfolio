@@ -6,49 +6,50 @@ function Contact() {
   const { email, instagram } = contactDetails;
 
   return (
-    <main className="container mx-auto px-4 py-10 max-w-3xl">
-      <div className="bg-white dark:bg-[#1f1f1f] shadow-md dark:shadow-lg rounded-xl p-8 md:p-12 text-center">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-heading dark:text-light-heading mb-4">
-          Let's Connect 🌐
-        </h1>
-        <p className="text-lg md:text-xl text-content dark:text-gray-300 italic max-w-xl mx-auto mb-6">
-          I'm always open to ideas, collaborations, or just a friendly hello.
-        </p>
+    <main className="container mx-auto px-4 pt-8 pb-16 max-w-4xl text-center">
+      {/* Heading */}
+      <h1 className="text-4xl md:text-5xl font-bold text-dark-heading dark:text-white relative inline-block after:block after:w-16 after:h-1 after:bg-blue-500 after:mx-auto after:mt-2">
+        Let's Connect 🌐
+      </h1>
 
-        {/* Email Section */}
-        <div className="mt-6">
-          <h3 className="text-xl md:text-2xl text-gradient font-semibold mb-1">
-            📬 Drop me a mail
-          </h3>
-          <a
-            href={`mailto:${email}`}
-            className="text-base md:text-lg underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            {email}
-          </a>
-        </div>
+      {/* Subheading */}
+      <p className="text-lg md:text-xl mt-4 text-gray-700 dark:text-gray-300 italic">
+        Open to collaborations, opportunities, or just a casual chat. Feel free to reach out!
+      </p>
 
-        {/* Instagram Section */}
-        <div className="mt-8">
-          <h3 className="text-xl md:text-2xl text-gradient font-semibold mb-1">
-            📸 Let's vibe on Instagram
-          </h3>
-          <a
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 text-pink-600 dark:text-pink-400 hover:text-pink-500 dark:hover:text-pink-300 transition-colors text-base md:text-lg"
-          >
-            <FaInstagram className="text-2xl" />
-            @nitesh_reddy_
-          </a>
-        </div>
+      {/* Email */}
+      <div className="mt-10">
+        <h3 className="text-xl font-semibold text-dark-heading dark:text-white mb-1">
+          📬 Drop me an email
+        </h3>
+        <a
+          href={`mailto:${email}`}
+          className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline transition-all"
+        >
+          {email}
+        </a>
+      </div>
 
-        {/* Footer Vibe Quote */}
-        <div className="mt-10 text-sm md:text-base text-gray-500 dark:text-gray-400 italic">
-          Creating. Connecting. Collaborating. <br />
-          Let's build something amazing together 🚀
-        </div>
+      {/* Instagram */}
+      <div className="mt-10">
+        <h3 className="text-xl font-semibold text-dark-heading dark:text-white mb-1">
+          📸 Let's vibe on Instagram
+        </h3>
+        <a
+          href={instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 text-pink-600 dark:text-pink-400 text-lg font-medium hover:underline transition-colors"
+        >
+          <FaInstagram className="text-2xl" />
+          @nitesh_reddy_
+        </a>
+      </div>
+
+      {/* Footer Message */}
+      <div className="mt-12 text-sm md:text-base text-gray-500 dark:text-gray-400 italic">
+        Building cool things. Meeting cool people. <br />
+        Let’s make something awesome together 🚀
       </div>
     </main>
   );
