@@ -56,7 +56,7 @@ function Technologies() {
 
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Programming Languages */}
-        <section className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-700">
+        <section className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
           <div className="flex items-center mb-8">
             <div className="w-1 h-8 bg-blue-500 rounded-full mr-4"></div>
             <h2 className="text-2xl md:text-3xl font-bold text-dark-heading dark:text-light-heading">
@@ -73,9 +73,9 @@ function Technologies() {
         </section>
 
         {/* Web Development */}
-        <section className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-700">
+        <section className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
           <div className="flex items-center mb-8">
-            <div className="w-1 h-8 bg-green-500 rounded-full mr-4"></div>
+            <div className="w-1 h-8 bg-blue-500 rounded-full mr-4"></div>
             <h2 className="text-2xl md:text-3xl font-bold text-dark-heading dark:text-light-heading">
               Web Development
             </h2>
@@ -96,9 +96,9 @@ function Technologies() {
         </section>
 
         {/* Tools */}
-        <section className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-700">
+        <section className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
           <div className="flex items-center mb-8">
-            <div className="w-1 h-8 bg-purple-500 rounded-full mr-4"></div>
+            <div className="w-1 h-8 bg-blue-500 rounded-full mr-4"></div>
             <h2 className="text-2xl md:text-3xl font-bold text-dark-heading dark:text-light-heading">
               Tools & Platforms
             </h2>
