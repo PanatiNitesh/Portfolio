@@ -27,70 +27,96 @@ function Technologies() {
 
   const renderTechIcons = (techArray) =>
     techArray.map(({ src, title }, index) => (
-      <img
-        key={index}
-        src={src}
-        alt={title}
-        title={title}
-        className="h-14 transition-transform duration-200 hover:scale-105"
-        onError={(e) => (e.target.style.display = "none")}
-      />
+      <div key={index} className="group flex flex-col items-center p-4 rounded-xl bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 hover:shadow-lg hover:scale-105 transition-all duration-300">
+        <img
+          src={src}
+          alt={title}
+          title={title}
+          className="h-12 mb-3 transition-transform duration-200 group-hover:scale-110"
+          onError={(e) => (e.target.style.display = "none")}
+        />
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          {title}
+        </span>
+      </div>
     ));
 
   return (
-    <main className="container mx-auto max-width pt-10 pb-20">
-      {/* Programming Languages */}
-      <section>
-        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold">
-          Programming Languages
+    <main className="container mx-auto max-width pt-16 pb-24 px-6">
+      {/* Page Header */}
+      <div className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-dark-heading dark:text-light-heading mb-6 tracking-tight">
+          Technologies & Skills
         </h1>
-        <div className="flex flex-wrap items-center gap-8 pt-6">
-          {renderTechIcons([
-            { src: python, title: "Python" },
-            { src: c, title: "C" },
-            { src: java, title: "Java" },
-          ])}
-        </div>
-      </section>
+        <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full mb-4"></div>
+        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          My technical arsenal for building modern, scalable applications
+        </p>
+      </div>
 
-      {/* Web Development */}
-      <section className="pt-10">
-        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold">
-          Web Development
-        </h1>
-        <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-7 items-center gap-10 pt-6">
-          {renderTechIcons([
-            { src: react, title: "React" },
-            { src: next, title: "Next.js" },
-            { src: mongodb, title: "MongoDB" },
-            { src: js, title: "JavaScript" },
-            { src: node, title: "Node.js" },
-            { src: express, title: "Express.js" },
-            { src: html, title: "HTML5" },
-            { src: css, title: "CSS3" },
-            { src: tailwind, title: "Tailwind CSS" },
-          ])}
-        </div>
-      </section>
+      <div className="max-w-7xl mx-auto space-y-16">
+        {/* Programming Languages */}
+        <section className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-700">
+          <div className="flex items-center mb-8">
+            <div className="w-1 h-8 bg-blue-500 rounded-full mr-4"></div>
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-heading dark:text-light-heading">
+              Programming Languages
+            </h2>
+          </div>
+          <div className="flex flex-wrap justify-center gap-6">
+            {renderTechIcons([
+              { src: python, title: "Python" },
+              { src: c, title: "C" },
+              { src: java, title: "Java" },
+            ])}
+          </div>
+        </section>
 
-      {/* Tools */}
-      <section className="pt-10">
-        <h1 className="text-2xl text-dark-heading dark:text-light-heading md:text-4xl xl:text-5xl font-bold">
-          Tools
-        </h1>
-        <div className="grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 items-center gap-10 pt-6">
-          {renderTechIcons([
-            { src: vscode, title: "VS Code" },
-            { src: git, title: "Git" },
-            { src: github, title: "GitHub" },
-            { src: npm, title: "NPM" },
-            { src: postman, title: "Postman" },
-            { src: figma, title: "Figma" },
-            { src: canva, title: "Canva" },
-            { src: docker, title: "Docker" },
-          ])}
-        </div>
-      </section>
+        {/* Web Development */}
+        <section className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-700">
+          <div className="flex items-center mb-8">
+            <div className="w-1 h-8 bg-green-500 rounded-full mr-4"></div>
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-heading dark:text-light-heading">
+              Web Development
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+            {renderTechIcons([
+              { src: react, title: "React" },
+              { src: next, title: "Next.js" },
+              { src: mongodb, title: "MongoDB" },
+              { src: js, title: "JavaScript" },
+              { src: node, title: "Node.js" },
+              { src: express, title: "Express.js" },
+              { src: html, title: "HTML5" },
+              { src: css, title: "CSS3" },
+              { src: tailwind, title: "Tailwind CSS" },
+            ])}
+          </div>
+        </section>
+
+        {/* Tools */}
+        <section className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 border border-gray-100 dark:border-gray-700">
+          <div className="flex items-center mb-8">
+            <div className="w-1 h-8 bg-purple-500 rounded-full mr-4"></div>
+            <h2 className="text-2xl md:text-3xl font-bold text-dark-heading dark:text-light-heading">
+              Tools & Platforms
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+            {renderTechIcons([
+              { src: vscode, title: "VS Code" },
+              { src: git, title: "Git" },
+              { src: github, title: "GitHub" },
+              { src: npm, title: "NPM" },
+              { src: postman, title: "Postman" },
+              { src: figma, title: "Figma" },
+              { src: canva, title: "Canva" },
+              { src: docker, title: "Docker" },
+            ])}
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
