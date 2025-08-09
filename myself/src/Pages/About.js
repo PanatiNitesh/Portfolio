@@ -9,7 +9,7 @@ function About() {
       <section className="mb-20">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-extrabold text-center text-dark-heading dark:text-light-heading mb-8 tracking-tight">
-            ✨ About Me
+            About Me
           </h1>
           <div className="w-16 h-1 bg-blue-500 mx-auto mb-12 rounded-full"></div>
           <p className="text-lg text-content text-center leading-relaxed">
@@ -22,7 +22,7 @@ function About() {
       <section className="mb-20">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-dark-heading dark:text-light-heading mb-8 tracking-tight">
-            💼 Work Experience
+            Work Experience
           </h1>
           <div className="w-20 h-1 bg-blue-500 mx-auto rounded-full"></div>
         </div>
@@ -54,9 +54,9 @@ function About() {
       <section>
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-extrabold text-dark-heading dark:text-light-heading mb-8 tracking-tight">
-            🎓 Education
+            Education
           </h1>
-          <div className="w-18 h-1 bg-blue-500 mx-auto rounded-full"></div>
+          <div className="w-12 h-1 bg-blue-500 mx-auto rounded-full"></div>
         </div>
         
         <div className="max-w-4xl mx-auto">
