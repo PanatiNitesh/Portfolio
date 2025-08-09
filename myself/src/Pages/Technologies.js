@@ -56,7 +56,7 @@ function Technologies() {
 
       <div className="max-w-7xl mx-auto space-y-16">
         {/* Programming Languages */}
-        <section className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+        <section className="bg-white/80 dark:bg-[#1f1f1f]/80 rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
           <div className="flex items-center mb-8">
             <div className="w-1 h-8 bg-blue-500 rounded-full mr-4"></div>
             <h2 className="text-2xl md:text-3xl font-bold text-dark-heading dark:text-light-heading">
@@ -73,7 +73,7 @@ function Technologies() {
         </section>
 
         {/* Web Development */}
-        <section className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+        <section className="bg-white/80 dark:bg-[#1f1f1f]/80 rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
           <div className="flex items-center mb-8">
             <div className="w-1 h-8 bg-blue-500 rounded-full mr-4"></div>
             <h2 className="text-2xl md:text-3xl font-bold text-dark-heading dark:text-light-heading">
@@ -96,7 +96,7 @@ function Technologies() {
         </section>
 
         {/* Tools */}
-        <section className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+        <section className="bg-white/80 dark:bg-[#1f1f1f]/80 rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300">
           <div className="flex items-center mb-8">
             <div className="w-1 h-8 bg-blue-500 rounded-full mr-4"></div>
             <h2 className="text-2xl md:text-3xl font-bold text-dark-heading dark:text-light-heading">
