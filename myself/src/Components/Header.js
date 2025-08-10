@@ -14,10 +14,11 @@ function Header() {
   <div className="flex justify-between items-center py-2 md:py-10">
     <NavLink to="/">
       <img
-  className="w-14 rounded-full"
-  src={isDarkMode ? logos.logogradientLight : logos.logogradient}
+  className="w-14 rounded-full bg-white p-1"
+  src={logos.logogradient}
   alt="logo"
 />
+
 
     </NavLink>
         <div onClick={toggleClass} className="cursor-pointer">
