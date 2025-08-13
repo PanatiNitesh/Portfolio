@@ -10,27 +10,18 @@ function Project({ title, image, description, techstack, previewLink, githubLink
       <p className="text-sm text-gray-500 mt-1">{techstack}</p>
 
       <div className="flex gap-4 mt-4">
-        {previewLink && (
-          <a
-            href={previewLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-          >
-            Live Preview
-          </a>
-        )}
+       {previewLink && (
+  <a href={previewLink} target="_blank" rel="noopener noreferrer">
+    Live Preview
+  </a>
+)}
 
-        {githubLink && (
-          <a
-            href={githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-800"
-          >
-            View Code
-          </a>
-        )}
+{githubLink && (
+  <a href={githubLink} target="_blank" rel="noopener noreferrer">
+    View Code
+  </a>
+)}
+        
       </div>
     </div>
   );
