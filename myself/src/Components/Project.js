@@ -1,6 +1,7 @@
 // Project.js
 import React from "react";
-import { FaGithub, FaFileAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FiExternalLink } from "react-icons/fi";
 
 function Project({ title, image, description, techstack, previewLink, githubLink }) {
   return (
@@ -20,9 +21,9 @@ function Project({ title, image, description, techstack, previewLink, githubLink
             href={previewLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 text-blue-600 hover:text-blue-800"
           >
-            <FaFileAlt /> Live Preview
+            <FiExternalLink /> Live Preview
           </a>
         )}
 
@@ -31,7 +32,7 @@ function Project({ title, image, description, techstack, previewLink, githubLink
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 text-gray-800 hover:text-black"
           >
             <FaGithub /> View Code
           </a>
