@@ -114,12 +114,12 @@ export const techStackDetails = {
 // Projects
 export const projectDetails = [
   {
-    title: "Project title 1",
+    title: "Banking System with Security",
     image: projectImage1,
     description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    techstack: "HTML/CSS, JavaScript",
-    previewLink: "https://google.com",
+      "End-to-end secure web solution integrating transaction control, powered by Java & Spring Boot services with an interactive React-based user interface",
+    techstack: " Java, Spring Boot, React, MongoDB",
+    previewLink: "https://pluto-banking.netlify.app/",
     githubLink: "https://github.com",
   },
   {
