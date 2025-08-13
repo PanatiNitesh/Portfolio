@@ -11,7 +11,8 @@ function Project({ title, image, description, techstack, previewLink, githubLink
           Tech Stack : <span className="font-light">{techstack}</span>
         </h3>
 
-        <div className="flex justify-between items-center mt-5">
+        {/* Action Buttons Container */}
+        <div className="flex items-center gap-x-6 mt-5">
           {/* Live Preview Button */}
           <div className="flex items-center">
             <svg
