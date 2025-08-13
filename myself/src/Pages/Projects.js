@@ -19,7 +19,7 @@ function Projects() {
                   description={description}
                   techstack={techstack}
                   previewLink={previewLink}
-                  githubLink={githubLink}
+                  githubLink={githubLink} // still pass it, condition handled in Project.jsx
                 />
               )
             )
