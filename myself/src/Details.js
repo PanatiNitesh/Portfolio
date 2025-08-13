@@ -120,7 +120,7 @@ export const projectDetails = [
       "End-to-end secure web solution integrating transaction control, powered by Java & Spring Boot services with an interactive React-based user interface",
     techstack: " Java, Spring Boot, React, MongoDB",
     previewLink: "https://pluto-banking.netlify.app/",
-    githubLink: "https://github.com",
+   
   },
   {
     title: "Project title 2",
