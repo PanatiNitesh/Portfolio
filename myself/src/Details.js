@@ -137,7 +137,7 @@ export const projectDetails = [
     description:
       "User-focused telehealth platform with a clean, intuitive Figma-designed interface.",
     techstack: "Figma, UI/UX Design,Prototyping",
-    previewLink: "https://www.figma.com/design/pa4CDuDENlb8GTf3U6GYay/Telemedicine-app?node-id=0-1&t=GQ2KrTt4X39TXENF-1",
+    previewLink: "https://www.figma.com/design/pa4CDuDENlb8GTf3U6GYay/Telemedicine-app?node-id=0-1&t=wimAME2H9B6Qk9pS-1",
   },
   {
     title: "GeoOptima",
@@ -145,7 +145,7 @@ export const projectDetails = [
     description:
       "GeoOptima: modern UI for location-driven insights and optimized navigation",
     techstack: "Figma, UI/UX Design,Prototyping",
-    previewLink: "https://www.figma.com/design/pwhB5oiB8jFXIRLLOPFxiP/GeoOptima?node-id=0-1&t=l6PPBYr1tjbNVMvn-1",
+    previewLink: "https://www.figma.com/design/pwhB5oiB8jFXIRLLOPFxiP/GeoOptima?node-id=0-1&t=s9KDOzr7wpnH2cD1-1",
   },
   {
     title: "Project title 5",
