@@ -117,7 +117,7 @@ export const projectDetails = [
     title: "Banking System with Security",
     image: projectImage1,
     description:
-      "“Secure web application with transaction control, built with Java Spring Boot backend and interactive React frontend",
+      "Secure web app for managing transactions with React frontend and Spring Boot backend",
     techstack: " Java, Spring Boot, React, MongoDB",
     previewLink: "https://pluto-banking.netlify.app/",
    
