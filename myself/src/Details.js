@@ -123,31 +123,29 @@ export const projectDetails = [
    
   },
   {
-    title: "Project title 2",
+    title: "Cost-Cutting AI Tool",
     image: projectImage2,
     description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    techstack: "HTML/CSS, JavaScript",
-    previewLink: "https://google.com",
-    githubLink: "https://github.com",
+      "AI-driven expense management and financial forecasting made simple",
+    techstack: "JavaScript, React.js, Node.js, MongoDB",
+    previewLink: "https://cost-sage-analysis.netlify.app/",
+
   },
   {
-    title: "Project title 3",
+    title: "Telemedicine App",
     image: projectImage3,
     description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    techstack: "HTML/CSS, JavaScript",
-    previewLink: "https://google.com",
-    githubLink: "https://github.com",
+      "User-focused telehealth platform with a clean, intuitive Figma-designed interface.",
+    techstack: "Figma, UI/UX Design,Prototyping",
+    previewLink: "https://www.figma.com/design/pa4CDuDENlb8GTf3U6GYay/Telemedicine-app?node-id=0-1&t=GQ2KrTt4X39TXENF-1",
   },
   {
-    title: "Project title 4",
+    title: "GeoOptima",
     image: projectImage4,
     description:
-      "This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content",
-    techstack: "HTML/CSS, JavaScript",
-    previewLink: "https://google.com",
-    githubLink: "https://github.com",
+      "GeoOptima: modern UI for location-driven insights and optimized navigation",
+    techstack: "Figma, UI/UX Design,Prototyping",
+    previewLink: "https://www.figma.com/design/pwhB5oiB8jFXIRLLOPFxiP/GeoOptima?node-id=0-1&t=l6PPBYr1tjbNVMvn-1",
   },
   {
     title: "Project title 5",
