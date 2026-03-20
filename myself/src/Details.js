@@ -4,10 +4,12 @@ import logo from "./assets/logo2.svg";
 
 import homeImg from "./assets/home.jpg";
 import aboutImg from "./assets/about.jpg";
+
+// Project Images
 import campusversa from "./assets/projects/campusversa.png";
 import codecrib from "./assets/projects/codecrib.png";
 import costsage from "./assets/projects/costsage.png";
-import  agrisense from "./assets/projects/agrisense.png";
+import agrisense from "./assets/projects/agrisense.png";
 import telemedicine from "./assets/projects/telemedicine.png";
 import concrete from "./assets/projects/concrete.png";
 
@@ -32,14 +34,6 @@ import node from "./assets/techstack/node.png";
 import express from "./assets/techstack/express.png";
 import canva from "./assets/techstack/canva.png";
 import docker from "./assets/techstack/docker.png";
-
-// Project Images
-// import projectImage1 from "./assets/projects/project1.jpg";
-// import projectImage2 from "./assets/projects/project2.jpg";
-// import projectImage3 from "./assets/projects/project3.jpg";
-// import projectImage4 from "./assets/projects/project4.jpg";
-
-
 // Logos
 export const logos = {
   logogradient,

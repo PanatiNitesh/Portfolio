@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Code,
   Terminal,
   Database,
   Cpu,
@@ -38,8 +37,8 @@ const techStackDetails = {
 
 function Technologies() {
   const {
-    python, c, java, react, next, mongodb, js, node, express, html, css, tailwind,
-    vscode, git, github, npm, postman, figma, canva, docker
+    python, java, react, next, mongodb, js, node, express, html, tailwind,
+    vscode, git, postman, figma, docker
   } = techStackDetails;
 const expertiseDomains = [
   {
