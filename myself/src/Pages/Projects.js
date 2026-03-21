@@ -4,37 +4,30 @@ import { projectDetails } from "../Details";
 
 function Projects() {
   return (
-    <main className="container mx-auto max-width pt-10 mb-20 px-6">
-      <section className="text-center">
+    <main className="min-h-screen bg-transparent pt-20 md:pt-28 pb-16 md:pb-24 px-4 md:px-8 overflow-x-hidden">
+      <section className="container mx-auto max-w-7xl text-center">
 
-        {/* Decorative top accent line */}
-        <div className="flex justify-center mb-6">
-          <span className="block h-1 w-16 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400 opacity-80" />
+        {/* Header Section */}
+        <div className="space-y-4 md:space-y-6 mb-16 md:mb-24">
+          <div className="flex justify-center items-center gap-3">
+             <span className="h-px w-8 bg-indigo-500/30" />
+             <span className="h-px w-8 bg-indigo-500/30" />
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white tracking-tighter leading-[1.1]">
+            Featured{" "}
+             <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-400 dark:via-purple-300 dark:to-pink-400 bg-clip-text text-transparent">
+              Projects
+            </span>
+          </h1>
+
+          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed text-sm md:text-lg px-2 md:px-0 font-light italic">
+            "Turning complex logic into elegant digital solutions, one project at a time."
+          </p>
         </div>
-
-        {/* Title */}
-        <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold text-gray-900 dark:text-white mb-4 tracking-tight">
-          Featured{" "}
-          <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-400 dark:via-purple-300 dark:to-pink-400 bg-clip-text text-transparent">
-            Projects
-          </span>
-        </h1>
-
-        {/* Divider */}
-        <div className="flex items-center justify-center gap-3 my-5">
-          <span className="h-px w-12 bg-gray-200 dark:bg-gray-700" />
-          <span className="w-2 h-2 rounded-full bg-indigo-400 dark:bg-indigo-500 opacity-70" />
-          <span className="h-px w-12 bg-gray-200 dark:bg-gray-700" />
-        </div>
-
-        {/* Description */}
-        <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed text-base">
-          Here is a highlight of my most recent work where I applied my skills to
-          build practical, real-world solutions and gain hands-on experience.
-        </p>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-14 mt-6">
           {projectDetails.map(
             (
               { title, image, description, techstack, previewLink, githubLink },
@@ -51,6 +44,12 @@ function Projects() {
               />
             )
           )}
+        </div>
+
+        {/* Footer Accent */}
+        <div className="mt-24 md:mt-32 flex flex-col items-center gap-4">
+           <div className="w-1 h-12 bg-gradient-to-b from-indigo-500 to-transparent rounded-full opacity-20" />
+           <p className="text-[10px] uppercase tracking-[0.5em] text-gray-400 dark:text-gray-600 font-bold">End of Gallery</p>
         </div>
 
       </section>
