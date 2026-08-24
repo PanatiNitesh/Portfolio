@@ -16,7 +16,8 @@ import {
   ArrowRight,
   Layers,
   Terminal,
-  ExternalLink
+  ExternalLink,
+  Trophy
 } from "lucide-react";
 
 const About = () => {
@@ -152,8 +153,13 @@ const About = () => {
               <div className="absolute left-[-24px] top-12 w-2 h-2 rounded-full bg-blue-500 hidden md:block shadow-[0_0_15px_rgba(59,130,246,0.6)]"></div>
 
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 md:mb-8 gap-4 md:gap-0">
-                <div className="space-y-1">
-                  <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                <div className="space-y-2">
+                  <span className={`inline-flex items-center gap-1.5 font-mono text-[9px] md:text-[10px] uppercase tracking-widest px-2.5 py-1 rounded-full font-semibold border ${
+                    work.Type === "Achievement"
+                      ? "bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 border-purple-200 dark:border-purple-500/20"
+                      : "bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-200 dark:border-blue-500/20"
+                  }`}>
+                    {work.Type === "Achievement" ? <Trophy size={12} className="text-purple-500" /> : <Briefcase size={12} className="text-blue-500" />}
                     {work.Type || "Experience"}
                   </span>
                   <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors tracking-tight">

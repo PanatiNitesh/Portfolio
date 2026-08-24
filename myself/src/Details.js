@@ -58,9 +58,45 @@ export const socialMediaUrl = {
   instagram: "https://www.instagram.com/nitesh_reddy_/",
 };
 
-// Work Experience
 // Work Experience / Career Milestones
 export const workDetails = [
+  {
+    Position: "Grand Finalist",
+    Company: "Meta × PyTorch × Scaler Hackathon 2026",
+    Location: "Scaler School of Technology, Bengaluru",
+    Type: "Achievement",
+    Duration: "2026",
+    Desc: [
+      "Selected among the finalist teams to compete in the 48-hour Grand Finale at Scaler School of Technology, Bengaluru.",
+      "Engineered and deployed deep learning models using PyTorch framework under intensive hackathon conditions.",
+      "Collaborated on real-time problem solving and presented solution architecture to industry mentors from Meta & Scaler."
+    ],
+    Tags: [
+      "Meta × PyTorch",
+      "AI / Deep Learning",
+      "Hackathon Finalist",
+      "PyTorch",
+      "Scaler"
+    ]
+  },
+  {
+    Position: "Runner-up",
+    Company: "QUANT-A-THON '26",
+    Location: "India (National Level)",
+    Type: "Achievement",
+    Duration: "2026",
+    Desc: [
+      "Secured 2nd Place by delivering an AI-powered solution.",
+      "Architected intelligent algorithms to deliver high-accuracy quantitative analysis and decision intelligence.",
+      "Engineered end-to-end scalable prototype tailored for predictive analytics."
+    ],
+    Tags: [
+      "AI Solution",
+      "Quantitative Analytics",
+      "Machine Learning",
+      "Problem Solving"
+    ]
+  },
   {
     Position: "SIH 2025 Winner",
     Company: "Smart India Hackathon",
@@ -80,11 +116,23 @@ export const workDetails = [
     ]
   },
   {
-    Position: "Internship",
+    Position: "Full Stack Developer Intern",
     Company: "JB PORTALS",
     Location: "Bengaluru",
     Type: "Internship",
     Duration: "Jan 2024 - Apr 2024",
+    Desc: [
+      "Engineered end-to-end full-stack web applications by developing responsive React frontend interfaces and RESTful backend API integrations.",
+      "Collaborated with cross-functional teams to improve platform usability, optimize data workflows, and enhance overall system architecture.",
+      "Built modular UI components and optimized database query handling for high-performance and maintainable web applications."
+    ],
+    Tags: [
+      "Full-Stack Development",
+      "React.js",
+      "Node.js / Express",
+      "REST APIs",
+      "UI/UX Design"
+    ]
   },
 ];
 ;
