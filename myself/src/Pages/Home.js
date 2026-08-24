@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { personalDetails, socialMediaUrl, contactDetails } from "../Details";
+import { socialMediaUrl, contactDetails } from "../Details";
 import { FaGithub, FaLinkedinIn, FaXTwitter, FaInstagram, FaCode } from "react-icons/fa6";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Copy, Check, Terminal, FileCode, Trophy, Sparkles } from "lucide-react";
 
 // Dynamic Typewriter Roles
 const roles = [
@@ -13,7 +13,6 @@ const roles = [
 ];
 
 function Home() {
-  const { homeImg } = personalDetails;
   const { linkdein, github, twitter, instagram } = socialMediaUrl;
   const { email } = contactDetails;
 
@@ -21,6 +20,10 @@ function Home() {
   const [currentText, setCurrentText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [typingSpeed, setTypingSpeed] = useState(90);
+
+  // Terminal active tab state
+  const [activeTab, setActiveTab] = useState("developer");
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     const fullText = roles[roleIndex];
@@ -56,8 +59,21 @@ function Home() {
     }
   };
 
+  const handleCopy = () => {
+    const codeSnippet = `const developer = {
+  name: "Panati Nitesh",
+  role: "Full-Stack & AI Engineer",
+  location: "Bengaluru, India",
+  stack: ["React", "Node.js", "PyTorch", "Python"],
+  status: "Available for innovative opportunities"
+};`;
+    navigator.clipboard.writeText(codeSnippet);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <div className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden px-6 sm:px-12 md:px-16 lg:px-28 xl:px-36 py-12 md:py-0 w-full">
+    <div className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 py-12 md:py-0 w-full">
       
       {/* --- LEFT SIDEBAR RAIL (Desktop) --- */}
       <div className="hidden lg:flex fixed left-6 xl:left-8 bottom-10 flex-col items-center gap-5 z-40">
@@ -136,10 +152,10 @@ function Home() {
       </div>
 
       {/* --- HERO MAIN CONTENT --- */}
-      <div className="container mx-auto max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center z-10">
+      <div className="container mx-auto max-w-6xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center z-10">
         
         {/* Left Text Column */}
-        <div className="lg:col-span-7 space-y-6 text-left">
+        <div className="lg:col-span-6 space-y-6 text-left">
           
           {/* Subtitle / Single Sleek Tag */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFEBE0] dark:bg-white/5 border border-stone-300/80 dark:border-white/10 shadow-sm">
@@ -203,25 +219,165 @@ function Home() {
 
         </div>
 
-        {/* Right Visual Card */}
-        <div className="lg:col-span-5 flex justify-center items-center">
-          <div className="relative group w-full max-w-sm sm:max-w-md">
+        {/* Right Interactive Developer Terminal Card */}
+        <div className="lg:col-span-6 flex justify-center items-center">
+          <div className="relative group w-full max-w-lg">
             
             {/* Ambient Backlight Glow */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-[#6B7E63]/20 via-amber-200/15 to-transparent dark:from-[#6B7E63]/15 dark:via-purple-500/10 rounded-[3.5rem] blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="absolute -inset-4 bg-gradient-to-tr from-[#6B7E63]/25 via-amber-200/20 to-purple-500/15 dark:from-[#6B7E63]/20 dark:via-purple-500/15 dark:to-blue-500/15 rounded-[3rem] blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-700" />
 
-            {/* Main Rounded Card */}
-            <div className="relative w-full aspect-[4/5] rounded-[3rem] bg-[#EFEBE0] dark:bg-[#18181C] border-2 border-stone-300/80 dark:border-white/10 shadow-2xl overflow-hidden flex items-center justify-center p-8 transition-all duration-500 group-hover:scale-[1.02]">
+            {/* Floating Top Badge */}
+            <div className="absolute -top-3.5 right-6 z-30 flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FAF8F5]/90 dark:bg-[#1E1E22]/90 backdrop-blur-md border border-stone-300/80 dark:border-white/10 shadow-md">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+              <span className="font-mono text-[10px] font-semibold text-stone-700 dark:text-stone-300">Available to Build</span>
+            </div>
+
+            {/* Main Rounded Terminal Container */}
+            <div className="relative w-full rounded-[2.5rem] bg-[#FAF8F4] dark:bg-[#16161A] border-2 border-stone-300/80 dark:border-white/10 shadow-2xl overflow-hidden transition-all duration-500 group-hover:border-stone-400 dark:group-hover:border-white/20">
               
-              {/* Subtle background decorative grid pattern in card */}
-              <div className="absolute inset-0 bg-[radial-gradient(#1E1E1E_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] opacity-[0.04] dark:opacity-[0.06]" />
-              
-              {/* Authentic Tom and Jerry Transparent Image */}
-              <img
-                src={homeImg}
-                alt="Tom and Jerry"
-                className="w-full h-full object-contain animate-float-slow drop-shadow-xl z-10"
-              />
+              {/* Terminal Window Header Bar */}
+              <div className="flex items-center justify-between px-6 py-4 bg-[#EFEBE0]/90 dark:bg-[#1A1A20] border-b border-stone-300/70 dark:border-white/5">
+                
+                {/* Traffic Lights */}
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-[#FF5F56]/90 border border-[#E0443E]/40" />
+                  <div className="w-3 h-3 rounded-full bg-[#FFBD2E]/90 border border-[#DEA123]/40" />
+                  <div className="w-3 h-3 rounded-full bg-[#27C93F]/90 border border-[#1AAB29]/40" />
+                </div>
+
+                {/* Tabs */}
+                <div className="flex items-center gap-1">
+                  <button
+                    onClick={() => setActiveTab("developer")}
+                    className={`flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium transition-all ${
+                      activeTab === "developer"
+                        ? "bg-[#FAF8F4] dark:bg-[#16161A] text-[#1E1E1E] dark:text-white shadow-sm"
+                        : "text-stone-500 hover:text-stone-800 dark:hover:text-stone-200"
+                    }`}
+                  >
+                    <FileCode size={13} className="text-[#6B7E63] dark:text-[#8BA87E]" />
+                    <span>engineer.ts</span>
+                  </button>
+
+                  <button
+                    onClick={() => setActiveTab("milestones")}
+                    className={`flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium transition-all ${
+                      activeTab === "milestones"
+                        ? "bg-[#FAF8F4] dark:bg-[#16161A] text-[#1E1E1E] dark:text-white shadow-sm"
+                        : "text-stone-500 hover:text-stone-800 dark:hover:text-stone-200"
+                    }`}
+                  >
+                    <Trophy size={13} className="text-amber-500" />
+                    <span>awards.json</span>
+                  </button>
+
+                  <button
+                    onClick={() => setActiveTab("terminal")}
+                    className={`flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono font-medium transition-all ${
+                      activeTab === "terminal"
+                        ? "bg-[#FAF8F4] dark:bg-[#16161A] text-[#1E1E1E] dark:text-white shadow-sm"
+                        : "text-stone-500 hover:text-stone-800 dark:hover:text-stone-200"
+                    }`}
+                  >
+                    <Terminal size={13} className="text-blue-500" />
+                    <span>bash</span>
+                  </button>
+                </div>
+
+                {/* Copy Snippet Button */}
+                <button
+                  onClick={handleCopy}
+                  className="p-1.5 rounded-lg text-stone-500 hover:text-stone-800 dark:hover:text-white hover:bg-stone-300/50 dark:hover:bg-white/10 transition-colors"
+                  aria-label="Copy snippet"
+                  title="Copy snippet"
+                >
+                  {copied ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} />}
+                </button>
+              </div>
+
+              {/* Code Editor Body */}
+              <div className="p-6 font-mono text-xs md:text-sm leading-relaxed overflow-x-auto min-h-[300px] flex flex-col justify-center">
+                
+                {activeTab === "developer" && (
+                  <div className="space-y-1 animate-fadeIn text-left">
+                    <p className="text-stone-400 dark:text-stone-500">{"// TypeScript configuration"}</p>
+                    <p>
+                      <span className="text-purple-600 dark:text-purple-400 font-semibold">interface </span>
+                      <span className="text-blue-600 dark:text-blue-300">SoftwareArchitect </span>
+                      <span>{"{"}</span>
+                    </p>
+                    <p className="pl-4">
+                      <span className="text-[#6B7E63] dark:text-[#8BA87E]">name</span>: <span className="text-amber-600 dark:text-amber-300">"Panati Nitesh"</span>;
+                    </p>
+                    <p className="pl-4">
+                      <span className="text-[#6B7E63] dark:text-[#8BA87E]">role</span>: <span className="text-amber-600 dark:text-amber-300">"Full-Stack & AI Engineer"</span>;
+                    </p>
+                    <p className="pl-4">
+                      <span className="text-[#6B7E63] dark:text-[#8BA87E]">coreStack</span>: [
+                      <span className="text-amber-600 dark:text-amber-300">"React"</span>,{" "}
+                      <span className="text-amber-600 dark:text-amber-300">"PyTorch"</span>,{" "}
+                      <span className="text-amber-600 dark:text-amber-300">"Node.js"</span>
+                      ];
+                    </p>
+                    <p className="pl-4">
+                      <span className="text-[#6B7E63] dark:text-[#8BA87E]">specialty</span>: <span className="text-amber-600 dark:text-amber-300">"AI Architecture & UI/UX"</span>;
+                    </p>
+                    <p className="pl-4">
+                      <span className="text-[#6B7E63] dark:text-[#8BA87E]">status</span>: <span className="text-blue-600 dark:text-blue-400 font-semibold">true</span>;
+                    </p>
+                    <p>{"};"}</p>
+                    <p className="pt-2 text-stone-400 dark:text-stone-500">{"// Ready to ship impactful solutions 🚀"}</p>
+                  </div>
+                )}
+
+                {activeTab === "milestones" && (
+                  <div className="space-y-1 animate-fadeIn text-left">
+                    <p className="text-stone-400 dark:text-stone-500">{"// Key Milestones & Recognitions"}</p>
+                    <p>{"{"}</p>
+                    <p className="pl-4">
+                      <span className="text-blue-600 dark:text-blue-300">"2026_Hackathon"</span>: <span className="text-amber-600 dark:text-amber-300">"Meta × PyTorch Grand Finalist"</span>,
+                    </p>
+                    <p className="pl-4">
+                      <span className="text-blue-600 dark:text-blue-300">"2026_Quantathon"</span>: <span className="text-amber-600 dark:text-amber-300">"Runner-Up (National Level)"</span>,
+                    </p>
+                    <p className="pl-4">
+                      <span className="text-blue-600 dark:text-blue-300">"2025_SIH"</span>: <span className="text-amber-600 dark:text-amber-300">"Smart India Hackathon Winner 🏆"</span>,
+                    </p>
+                    <p className="pl-4">
+                      <span className="text-blue-600 dark:text-blue-300">"Experience"</span>: <span className="text-amber-600 dark:text-amber-300">"Full Stack Developer Intern @ JB Portals"</span>
+                    </p>
+                    <p>{"}"}</p>
+                  </div>
+                )}
+
+                {activeTab === "terminal" && (
+                  <div className="space-y-2 animate-fadeIn text-left">
+                    <p className="text-stone-400 dark:text-stone-500">$ npx build-future --innovative</p>
+                    <p className="text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                      <Sparkles size={13} />
+                      <span>Optimizing full-stack reactive engines... [DONE]</span>
+                    </p>
+                    <p className="text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
+                      <Sparkles size={13} />
+                      <span>Integrating PyTorch deep learning models... [DONE]</span>
+                    </p>
+                    <p className="text-stone-700 dark:text-stone-300 pt-1">
+                      ➜ <span className="text-[#6B7E63] dark:text-[#8BA87E] font-bold">System Online:</span> Panati Nitesh portfolio initialized.
+                    </p>
+                  </div>
+                )}
+
+              </div>
+
+              {/* Terminal Bottom Status Bar */}
+              <div className="px-6 py-2.5 bg-[#EFEBE0]/60 dark:bg-[#121216] border-t border-stone-300/50 dark:border-white/5 flex items-center justify-between text-[11px] font-mono text-stone-500 dark:text-stone-400">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#6B7E63] dark:bg-[#8BA87E]"></span>
+                  <span>main • UTF-8</span>
+                </div>
+                <span>React 18 & Tailwind</span>
+              </div>
+
             </div>
           </div>
         </div>
