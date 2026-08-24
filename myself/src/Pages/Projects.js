@@ -4,30 +4,28 @@ import { projectDetails } from "../Details";
 
 function Projects() {
   return (
-    <main className="min-h-screen bg-transparent pt-20 md:pt-28 pb-16 md:pb-24 px-4 md:px-8 overflow-x-hidden">
+    <main className="min-h-screen bg-transparent pt-12 md:pt-16 pb-16 md:pb-24 px-4 md:px-8 overflow-x-hidden">
       <section className="container mx-auto max-w-7xl text-center">
 
         {/* Header Section */}
-        <div className="space-y-4 md:space-y-6 mb-16 md:mb-24">
-          <div className="flex justify-center items-center gap-3">
-             <span className="h-px w-8 bg-indigo-500/30" />
-             <span className="h-px w-8 bg-indigo-500/30" />
-          </div>
+        <div className="space-y-4 mb-16 md:mb-20">
+          <span className="text-[#6B7E63] dark:text-[#8BA87E] font-mono tracking-[0.3em] uppercase text-[10px] font-bold block">
+            Selected Works
+          </span>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white tracking-tighter leading-[1.1]">
-            Featured{" "}
-             <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dark:from-indigo-400 dark:via-purple-300 dark:to-pink-400 bg-clip-text text-transparent">
-              Projects
-            </span>
+          <h1 className="text-4xl md:text-6xl font-bold text-[#1E1E1E] dark:text-white tracking-tight leading-[1.1]">
+            Featured Projects
           </h1>
 
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed text-sm md:text-lg px-2 md:px-0 font-light italic">
-            "Turning complex logic into elegant digital solutions, one project at a time."
+          <p className="text-stone-600 dark:text-stone-400 max-w-2xl mx-auto leading-relaxed text-sm md:text-base px-2 md:px-0">
+            "Transforming complex technical requirements into elegant, high-impact digital experiences."
           </p>
+
+          <div className="w-12 h-1 bg-[#6B7E63] dark:bg-[#8BA87E] mx-auto rounded-full mt-4"></div>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-14 mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
           {projectDetails.map(
             (
               { title, image, description, techstack, previewLink, githubLink },
@@ -47,9 +45,9 @@ function Projects() {
         </div>
 
         {/* Footer Accent */}
-        <div className="mt-24 md:mt-32 flex flex-col items-center gap-4">
-           <div className="w-1 h-12 bg-gradient-to-b from-indigo-500 to-transparent rounded-full opacity-20" />
-           <p className="text-[10px] uppercase tracking-[0.5em] text-gray-400 dark:text-gray-600 font-bold">End of Gallery</p>
+        <div className="mt-20 flex flex-col items-center gap-4">
+           <div className="w-[1px] h-12 bg-stone-300 dark:bg-stone-700" />
+           <p className="text-[10px] uppercase font-mono tracking-[0.3em] text-stone-400 dark:text-stone-500 font-bold">End of Gallery</p>
         </div>
 
       </section>
@@ -57,4 +55,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Projects;

@@ -44,39 +44,34 @@ function Technologies() {
   const expertiseDomains = [
     {
       title: "Data Structures & Algorithms",
-      icon: <Binary className="text-white" size={24} />,
-      desc: "Writing efficient and optimized code to solve complex problems using strong logical thinking and algorithmic design.",
-      bg: "bg-purple-600",
-      glow: "shadow-purple-500/20"
+      icon: <Binary className="text-[#1E1E1E] dark:text-white" size={24} />,
+      desc: "Writing efficient and optimized algorithms to solve complex problems with strong logical rigor.",
+      bg: "bg-[#EAE5D8] dark:bg-white/10",
     },
     {
       title: "Full-Stack Development",
-      icon: <Cpu className="text-white" size={24} />,
-      desc: "Building complete end-to-end applications by integrating frontend interfaces with backend systems and databases.",
-      bg: "bg-indigo-600",
-      glow: "shadow-indigo-500/20"
+      icon: <Cpu className="text-[#1E1E1E] dark:text-white" size={24} />,
+      desc: "Building scalable end-to-end applications by integrating reactive UI architectures with robust backend services.",
+      bg: "bg-[#EAE5D8] dark:bg-white/10",
     },
     {
-      title: "Web Development",
-      icon: <Globe className="text-white" size={24} />,
-      desc: "Designing responsive, interactive, and user-friendly web interfaces with modern frontend technologies.",
-      bg: "bg-blue-600",
-      glow: "shadow-blue-500/20"
+      title: "Web Technologies",
+      icon: <Globe className="text-[#1E1E1E] dark:text-white" size={24} />,
+      desc: "Designing responsive, accessible, and delightful interactive web applications with modern ecosystems.",
+      bg: "bg-[#EAE5D8] dark:bg-white/10",
     },
     {
-      title: "Machine Learning",
-      icon: <BrainCircuit className="text-white" size={24} />,
-      desc: "Developing intelligent systems that analyze data patterns to automate decisions and improve predictions.",
-      bg: "bg-pink-600",
-      glow: "shadow-pink-500/20"
+      title: "Machine Learning & AI",
+      icon: <BrainCircuit className="text-[#1E1E1E] dark:text-white" size={24} />,
+      desc: "Developing deep learning models and predictive intelligence systems with PyTorch, TensorFlow, and Python.",
+      bg: "bg-[#EAE5D8] dark:bg-white/10",
     }
   ];
 
   const categories = [
     {
       title: "Frontend",
-      icon: <Layout className="text-blue-500" size={20} />,
-      color: "blue",
+      icon: <Layout className="text-[#6B7E63] dark:text-[#8BA87E]" size={20} />,
       items: [
         { src: react, title: "React.js" },
         { src: next, title: "Next.js" },
@@ -87,20 +82,18 @@ function Technologies() {
     },
     {
       title: "Backend",
-      icon: <Settings className="text-purple-500" size={20} />,
-      color: "purple",
+      icon: <Settings className="text-purple-600 dark:text-purple-400" size={20} />,
       items: [
         { src: node, title: "Node.js" },
         { src: express, title: "Express.js" },
         { src: python, title: "Python" },
         { src: java, title: "Java" },
-        { title: "RESTful APIs" },
+        { title: "REST APIs" },
       ]
     },
     {
       title: "Database",
-      icon: <Database className="text-pink-500" size={20} />,
-      color: "pink",
+      icon: <Database className="text-amber-600 dark:text-amber-400" size={20} />,
       items: [
         { src: mongodb, title: "MongoDB" },
         { title: "SQL" },
@@ -108,9 +101,8 @@ function Technologies() {
       ]
     },
     {
-      title: "Tools & Software",
-      icon: <ShieldCheck className="text-emerald-500" size={20} />,
-      color: "emerald",
+      title: "Tools & DevOps",
+      icon: <ShieldCheck className="text-emerald-600 dark:text-emerald-400" size={20} />,
       items: [
         { src: git, title: "Git & GitHub" },
         { src: docker, title: "Docker" },
@@ -122,74 +114,68 @@ function Technologies() {
   ];
 
   return (
-    <main className="min-h-screen bg-transparent pt-20 md:pt-24 pb-12 md:pb-16 px-4 md:px-6 overflow-x-hidden">
+    <main className="min-h-screen bg-transparent pt-12 md:pt-16 pb-12 md:pb-16 px-4 md:px-8 overflow-x-hidden">
 
       {/* --- HEADER SECTION --- */}
-      <div className="container mx-auto max-w-6xl text-center mb-16 md:mb-24">
-        <span className="text-blue-600 dark:text-blue-500 font-black tracking-[0.4em] uppercase text-[9px] md:text-[10px] block mb-3 md:mb-4">
-          Technical Foundation
+      <div className="container mx-auto max-w-5xl text-center mb-16 md:mb-24">
+        <span className="text-[#6B7E63] dark:text-[#8BA87E] font-mono tracking-[0.3em] uppercase text-[10px] font-bold block mb-3">
+          Technical Toolkit
         </span>
-        <h1 className="text-4xl md:text-7xl leading-tight md:leading-[1.15] pb-2 font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-500 dark:from-white dark:to-white/40 mb-4 md:mb-6">
-          Technology Stack
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#1E1E1E] dark:text-white mb-4">
+          Skills & Technologies
         </h1>
-        <p className="text-gray-500 dark:text-gray-500 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed mb-8 md:mb-10 px-2 md:px-0">
-          An overview of the technologies and tools I work with to turn ideas into functional, real-world applications.
+        <p className="text-stone-600 dark:text-stone-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed mb-6 px-2 md:px-0">
+          The languages, frameworks, and developer tools I leverage to build production-grade software and intelligent applications.
         </p>
 
-        <div className="w-10 md:w-12 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mx-auto rounded-full"></div>
+        <div className="w-12 h-1 bg-[#6B7E63] dark:bg-[#8BA87E] mx-auto rounded-full"></div>
       </div>
 
       {/* --- EXPERTISE DOMAINS SECTION --- */}
-      <section className="container mx-auto max-w-6xl mb-24 md:mb-32">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
+      <section className="container mx-auto max-w-6xl mb-20 md:mb-28">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {expertiseDomains.map((domain, idx) => (
             <div
               key={idx}
-              className="group p-6 md:p-8 rounded-[2rem] bg-white dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 hover:border-gray-300 dark:hover:border-white/10 hover:bg-gray-50 dark:hover:bg-white/[0.04] transition-all duration-500 relative overflow-hidden shadow-sm dark:shadow-none flex flex-col h-full"
+              className="group p-7 rounded-[2.5rem] bg-[#FDFBF7] dark:bg-[#18181B] border border-stone-300/70 dark:border-white/10 hover:border-stone-400 dark:hover:border-white/20 hover:shadow-xl shadow-sm transition-all duration-300 flex flex-col h-full"
             >
-              <div className={`w-12 h-12 rounded-xl ${domain.bg} flex items-center justify-center mb-5 shadow-lg ${domain.glow} group-hover:scale-110 transition-transform duration-500`}>
+              <div className={`w-14 h-14 rounded-2xl ${domain.bg} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 {domain.icon}
               </div>
 
               <div className="flex flex-col flex-grow">
-                <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-black dark:group-hover:text-white/90 transition-colors">
+                <h3 className="text-lg font-bold mb-3 text-[#1E1E1E] dark:text-white transition-colors">
                   {domain.title}
                 </h3>
 
-                <p className="text-gray-500 dark:text-gray-500 text-sm leading-relaxed flex-grow">
+                <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed flex-grow">
                   {domain.desc}
                 </p>
               </div>
-
-              {/* Decorative background blur */}
-              <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gray-400/5 dark:bg-white/5 blur-[60px] rounded-full group-hover:bg-gray-400/10 dark:group-hover:bg-white/10 transition-all"></div>
             </div>
           ))}
         </div>
       </section>
 
       {/* --- THE TOOLKIT --- */}
-      <section className="container mx-auto max-w-7xl mb-12">
-        <div className="flex items-center gap-3 md:gap-4 mb-10 md:mb-16 px-2 md:px-4">
-          <Zap className="text-blue-600 dark:text-blue-500" size={24} />
-          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Technical Skillset</h2>
+      <section className="container mx-auto max-w-6xl mb-12">
+        <div className="flex items-center gap-3 mb-10 px-2">
+          <Zap className="text-[#6B7E63] dark:text-[#8BA87E]" size={22} />
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-[#1E1E1E] dark:text-white">Technical Skillset</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((cat, idx) => (
             <div
               key={idx}
-              className="p-6 md:p-8 rounded-[2rem] bg-white dark:bg-white/[0.01] border border-gray-200 dark:border-white/5 hover:border-gray-300 dark:hover:border-white/10 transition-all group relative overflow-hidden shadow-sm dark:shadow-none"
+              className="p-7 rounded-[2.5rem] bg-[#FDFBF7] dark:bg-[#18181B] border border-stone-300/70 dark:border-white/10 shadow-sm transition-all group relative overflow-hidden"
             >
-              {/* Overlay color hover effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-${cat.color}-500/[0.03] dark:from-${cat.color}-500/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity`}></div>
-
               <div className="relative z-10">
-                <div className="flex items-center mb-6 md:mb-8">
-                  <div className={`p-2 rounded-lg bg-${cat.color}-500/10 mr-4 group-hover:scale-110 transition-transform`}>
+                <div className="flex items-center mb-6">
+                  <div className="p-2.5 rounded-xl bg-[#EAE5D8] dark:bg-white/5 mr-3 group-hover:scale-110 transition-transform">
                     {cat.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-gray-800 dark:text-white/80 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+                  <h3 className="text-base font-bold text-[#1E1E1E] dark:text-white">
                     {cat.title}
                   </h3>
                 </div>
@@ -198,12 +184,12 @@ function Technologies() {
                   {cat.items.map((item, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-2.5 px-3 py-2 bg-gray-100 dark:bg-white/[0.03] border border-gray-200 dark:border-white/5 rounded-xl text-[11px] md:text-xs font-medium text-gray-600 dark:text-gray-500 group-hover:text-gray-900 dark:group-hover:text-gray-300 group-hover:bg-white dark:group-hover:bg-white/[0.06] group-hover:border-gray-300 dark:group-hover:border-white/10 transition-all"
+                      className="flex items-center gap-2 px-3 py-2 bg-[#F4EFE6] dark:bg-white/[0.04] border border-stone-300/60 dark:border-white/5 rounded-xl text-xs font-medium text-stone-700 dark:text-stone-300 hover:text-black dark:hover:text-white transition-all"
                     >
                       {item.src ? (
-                        <img src={item.src} alt="" className="w-3.5 h-3.5 object-contain opacity-60 dark:opacity-60 group-hover:opacity-100 transition-opacity" />
+                        <img src={item.src} alt="" className="w-4 h-4 object-contain" />
                       ) : (
-                        <Terminal size={12} className="text-gray-400 dark:text-gray-600" />
+                        <Terminal size={12} className="text-stone-500" />
                       )}
                       {item.title}
                     </div>

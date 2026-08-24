@@ -1,34 +1,27 @@
 import React from "react";
 import { Mail, Instagram, ArrowRight, MessageSquare, Send } from "lucide-react";
-
-// Contact details embedded locally to ensure the component is self-contained and runnable
-const contactDetails = {
-  email: "niteshreddy242005@gmail.com",
-  instagram: "https://instagram.com/nitesh_reddy_"
-};
+import { contactDetails } from "../Details";
 
 const Contact = () => {
   const { email, instagram } = contactDetails;
 
   return (
-    <main className="min-h-screen bg-transparent pt-20 md:pt-24 pb-12 md:pb-16 px-4 md:px-6 overflow-x-hidden">
+    <main className="min-h-screen bg-transparent pt-12 md:pt-16 pb-12 md:pb-16 px-4 md:px-8 overflow-x-hidden">
       
       {/* --- CINEMATIC HEADER --- */}
-      <section className="container mx-auto max-w-4xl text-center mb-16 md:mb-32">
-        <div className="space-y-3 md:space-y-4">
-          <span className="text-blue-600 dark:text-blue-500 font-black tracking-[0.3em] md:tracking-[0.4em] text-[9px] md:text-[10px] block">
-            Connect With Me
+      <section className="container mx-auto max-w-4xl text-center mb-16 md:mb-24">
+        <div className="space-y-3">
+          <span className="text-[#6B7E63] dark:text-[#8BA87E] font-mono tracking-[0.3em] uppercase text-[10px] font-bold block">
+            Let's Talk
           </span>
-          <h1 className="text-5xl md:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-900 to-gray-500 dark:from-white dark:to-white/40 tracking-tighter leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#1E1E1E] dark:text-white tracking-tight">
             Get in Touch
           </h1>
-          <p className="text-gray-500 dark:text-gray-400 text-sm md:text-lg leading-relaxed max-w-xl mx-auto pt-2 md:pt-4 px-2">
-            I'd love to hear from you! Whether you have a question, a project idea, or just want to say hi, my inbox is always open.
+          <p className="text-stone-600 dark:text-stone-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto pt-2 px-2">
+            Whether you have an opportunity, a technical collaboration, or simply want to connect, my inbox is always open.
           </p>
         </div>
-        <div className="mt-8 md:mt-12 inline-flex items-center gap-3 text-black/10 dark:text-white/20 animate-bounce">
-           <div className="w-[1px] h-8 md:h-12 bg-gradient-to-b from-blue-500/50 to-transparent"></div>
-        </div>
+        <div className="w-12 h-1 bg-[#6B7E63] dark:bg-[#8BA87E] mx-auto rounded-full mt-6"></div>
       </section>
 
       {/* --- CONTACT GRID --- */}
@@ -38,26 +31,24 @@ const Contact = () => {
           {/* Email Card */}
           <a 
             href={`mailto:${email}`}
-            className="group relative p-6 md:p-10 rounded-3xl md:rounded-[3rem] bg-white dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 hover:border-blue-500/30 transition-all duration-500 overflow-hidden shadow-sm dark:shadow-none"
+            className="group relative p-8 md:p-10 rounded-[2.5rem] bg-[#FDFBF7] dark:bg-[#18181B] border border-stone-300/70 dark:border-white/10 hover:border-[#6B7E63] dark:hover:border-[#8BA87E]/50 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl"
           >
             <div className="relative z-10 flex flex-col h-full">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">
-                <Mail size={24} className="md:w-8 md:h-8" />
+              <div className="w-14 h-14 rounded-2xl bg-[#EAE5D8] dark:bg-white/5 border border-stone-300 dark:border-white/10 flex items-center justify-center text-[#6B7E63] dark:text-[#8BA87E] mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Mail size={24} />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">Drop me an email</h3>
-              <p className="text-gray-500 dark:text-gray-500 text-xs md:text-sm mb-6 md:mb-8">Available for freelance and full-time opportunities.</p>
+              <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#1E1E1E] dark:text-white">Direct Email</h3>
+              <p className="text-stone-500 dark:text-stone-400 text-xs md:text-sm mb-8">Available for software engineering roles & exciting collaborations.</p>
               
               <div className="mt-auto flex items-center justify-between gap-2">
-                <span className="text-sm md:text-lg font-mono text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
+                <span className="text-sm md:text-base font-mono text-stone-800 dark:text-stone-200 group-hover:text-[#6B7E63] dark:group-hover:text-[#8BA87E] transition-colors truncate">
                   {email}
                 </span>
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-600 dark:text-white group-hover:bg-blue-500 group-hover:border-blue-500 group-hover:text-white transition-all duration-300 shrink-0">
-                   <Send size={14} className="md:w-4 md:h-4" />
+                <div className="w-9 h-9 rounded-full border border-stone-300 dark:border-white/10 flex items-center justify-center text-stone-600 dark:text-stone-300 group-hover:bg-[#1E1E1E] dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-black transition-all duration-300 shrink-0">
+                   <Send size={13} />
                 </div>
               </div>
             </div>
-            {/* Background Accent */}
-            <div className="absolute top-0 right-0 w-24 md:w-32 h-24 md:h-32 bg-blue-500/5 blur-[60px] md:blur-[80px] rounded-full group-hover:bg-blue-500/10 transition-all"></div>
           </a>
 
           {/* Instagram Card */}
@@ -65,38 +56,36 @@ const Contact = () => {
             href={instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative p-6 md:p-10 rounded-3xl md:rounded-[3rem] bg-white dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 hover:border-pink-500/30 transition-all duration-500 overflow-hidden shadow-sm dark:shadow-none"
+            className="group relative p-8 md:p-10 rounded-[2.5rem] bg-[#FDFBF7] dark:bg-[#18181B] border border-stone-300/70 dark:border-white/10 hover:border-[#E4405F]/60 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl"
           >
             <div className="relative z-10 flex flex-col h-full">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-600 dark:text-pink-400 mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">
-                <Instagram size={24} className="md:w-8 md:h-8" />
+              <div className="w-14 h-14 rounded-2xl bg-[#F6E8EB] dark:bg-[#E4405F]/10 border border-pink-200 dark:border-[#E4405F]/20 flex items-center justify-center text-[#E4405F] mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Instagram size={24} />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-2 text-gray-900 dark:text-white">Social Connection</h3>
-              <p className="text-gray-500 dark:text-gray-500 text-xs md:text-sm mb-6 md:mb-8">Follow my journey and see behind-the-scenes work.</p>
+              <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#1E1E1E] dark:text-white">Social Channel</h3>
+              <p className="text-stone-500 dark:text-stone-400 text-xs md:text-sm mb-8">Follow for project updates, hackathon journeys, and tech life.</p>
               
               <div className="mt-auto flex items-center justify-between gap-2">
-                <span className="text-sm md:text-lg font-mono text-gray-700 dark:text-gray-300 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors truncate">
+                <span className="text-sm md:text-base font-mono text-stone-800 dark:text-stone-200 group-hover:text-[#E4405F] transition-colors truncate">
                   @nitesh_reddy_
                 </span>
-                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-600 dark:text-white group-hover:bg-pink-500 group-hover:border-pink-500 group-hover:text-white transition-all duration-300 shrink-0">
-                   <ArrowRight size={14} className="md:w-4 md:h-4" />
+                <div className="w-9 h-9 rounded-full border border-stone-300 dark:border-white/10 flex items-center justify-center text-stone-600 dark:text-stone-300 group-hover:bg-[#E4405F] group-hover:border-[#E4405F] group-hover:text-white transition-all duration-300 shrink-0">
+                   <ArrowRight size={13} />
                 </div>
               </div>
             </div>
-            {/* Background Accent */}
-            <div className="absolute top-0 right-0 w-24 md:w-32 h-24 md:h-32 bg-pink-500/5 blur-[60px] md:blur-[80px] rounded-full group-hover:bg-pink-500/10 transition-all"></div>
           </a>
 
         </div>
       </section>
 
       {/* --- FOOTER STATEMENT --- */}
-      <section className="container mx-auto max-w-4xl mt-16 md:mt-32 px-2 md:px-0">
-        <div className="p-8 md:p-12 rounded-3xl md:rounded-[3.5rem] bg-gradient-to-br from-gray-50 dark:from-white/[0.03] to-transparent border border-gray-200 dark:border-white/5 text-center relative overflow-hidden group">
-          <MessageSquare className="absolute -top-6 -left-6 md:-top-10 md:-left-10 text-black/[0.02] dark:text-white/[0.02] scale-[3] md:scale-[5] rotate-12" size={80} />
-          <p className="text-lg md:text-2xl text-gray-500 dark:text-gray-400 leading-relaxed relative z-10 font-light italic">
-            "Whether it's code or conversation — I'm just a message away. <br className="hidden md:block" />
-            Let's spark ideas and build <span className="text-gray-900 dark:text-white font-medium not-italic">something extraordinary.</span>"
+      <section className="container mx-auto max-w-4xl mt-16 md:mt-24 px-2 md:px-0">
+        <div className="p-8 md:p-12 rounded-[2.5rem] bg-[#F4EFE6] dark:bg-white/[0.02] border border-stone-300/70 dark:border-white/5 text-center relative overflow-hidden group">
+          <MessageSquare className="absolute -top-6 -left-6 md:-top-10 md:-left-10 text-stone-400/[0.1] dark:text-white/[0.02] scale-[3] md:scale-[5] rotate-12" size={80} />
+          <p className="text-base md:text-xl text-stone-600 dark:text-stone-300 leading-relaxed relative z-10 font-normal">
+            "Whether it's code, architecture, or deep learning — I'm just a message away. <br className="hidden md:block" />
+            Let's build <span className="text-[#1E1E1E] dark:text-white font-bold">something impactful together.</span>"
           </p>
         </div>
       </section>

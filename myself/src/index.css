@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --nav-height: 90px;
+  --nav-height: 80px;
+  --bg-light: #F7F5EE;
+  --bg-dark: #121214;
 }
 
 html {
@@ -12,12 +16,56 @@ html {
 
 body {
   overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-light);
+  color: #1E1E1E;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html.dark body {
-  background-color: #0b0b0b;
+  background-color: var(--bg-dark);
+  color: #F5F5F7;
 }
 
-main {
-  padding-top: var(--nav-height);
+/* Custom typing cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: currentColor;
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 0.9s infinite;
+}
+
+/* Vertical text orientation */
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 113, 108, 0.25);
+  border-radius: 9999px;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 113, 108, 0.45);
 }

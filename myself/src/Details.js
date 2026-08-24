@@ -2,7 +2,7 @@
 import logogradient from "./assets/logo.svg";
 import logo from "./assets/logo2.svg";
 
-import homeImg from "./assets/home.jpg";
+import homeImg from "./assets/hero_avatar.png";
 import aboutImg from "./assets/about.jpg";
 
 // Project Images

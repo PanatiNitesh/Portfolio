@@ -1,86 +1,110 @@
 import React, { useState } from "react";
-import { logos, socialMediaUrl } from "../Details";
-import { FaXTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import { Sun, Moon, Menu, X } from "lucide-react";
 
-
-function Header() {
+function Header({ isDarkMode, setIsDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
-  const { linkdein, github, twitter } = socialMediaUrl;
-
-  const toggleClass = () => setIsOpen(!isOpen);
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      const yOffset = -70;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
     setIsOpen(false);
   };
 
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
+  const navItems = [
+    { label: "About", id: "about" },
+    { label: "Experience", id: "about" },
+    { label: "Projects", id: "projects" },
+    { label: "Technologies", id: "technologies" },
+    { label: "Contact", id: "contact" },
+  ];
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-transparent">
-      <div className="container mx-auto md:flex justify-between py-2 max-width">
-        <div className="flex justify-between items-center py-2 md:py-4">
-          <button onClick={() => scrollToSection("home")}>
-            <img
-              className="w-14 rounded-full bg-white p-1"
-              src={logos.logogradient}
-              alt="logo"
-            />
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#F7F5EE]/85 dark:bg-[#121214]/85 border-b border-stone-200/60 dark:border-white/5 transition-colors duration-300">
+      <div className="container mx-auto max-w-7xl px-6 md:px-12 flex justify-between items-center h-20">
+        
+        {/* Brand Logo */}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="group text-2xl md:text-3xl font-extrabold tracking-tight text-[#1E1E1E] dark:text-white transition-transform duration-200 hover:scale-105"
+        >
+          <span>Nitesh</span>
+          <span className="text-[#6B7E63] dark:text-[#8BA87E] text-3xl leading-none">.</span>
+        </button>
+
+        {/* Desktop Navigation Links */}
+        <nav className="hidden md:flex items-center space-x-8">
+          <ul className="flex items-center space-x-7 font-medium text-sm text-[#57534E] dark:text-[#A1A1AA]">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <button
+                  onClick={() => scrollToSection(item.id)}
+                  className="hover:text-[#1E1E1E] dark:hover:text-white transition-colors duration-200 py-1 relative group"
+                >
+                  {item.label}
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#1E1E1E] dark:bg-white transition-all duration-300 group-hover:w-full rounded-full" />
+                </button>
+              </li>
+            ))}
+          </ul>
+
+          {/* Theme Switcher Button */}
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+            className="p-2.5 rounded-full bg-stone-200/70 hover:bg-stone-300/80 dark:bg-white/10 dark:hover:bg-white/15 text-[#1E1E1E] dark:text-white transition-all duration-200 hover:scale-110 active:scale-95"
+          >
+            {isDarkMode ? <Sun size={17} className="text-amber-400" /> : <Moon size={17} className="text-stone-700" />}
+          </button>
+        </nav>
+
+        {/* Mobile Hamburger & Theme Button */}
+        <div className="flex items-center gap-3 md:hidden">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle Theme"
+            className="p-2 rounded-full bg-stone-200/70 dark:bg-white/10 text-[#1E1E1E] dark:text-white"
+          >
+            {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} className="text-stone-700" />}
           </button>
 
-          <div onClick={toggleClass} className="cursor-pointer md:hidden">
-            <svg
-              className="stroke-dark-heading dark:stroke-white"
-              width="25"
-              height="20"
-              viewBox="0 0 16 13"
-            >
-              <path
-                d="M1.4375 1.3125H14.5625M1.4375 11.3125H14.5625M1.4375 6.3125H14.5625"
-                strokeWidth="1.875"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 text-[#1E1E1E] dark:text-white"
+            aria-label="Toggle Menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
-
-        <nav className={`${!isOpen ? "hidden" : ""} md:flex justify-between`}>
-          <ul className="dark:text-light-content font-medium md:flex items-center md:space-x-6 md:mr-10">
-            {["home", "about", "technologies", "projects", "contact"].map(
-              (item) => (
-                <li
-                  key={item}
-                  className="cursor-pointer capitalize"
-                  onClick={() => scrollToSection(item)}
-                >
-                  {item}
-                </li>
-              )
-            )}
-          </ul>
-
-
-          <ul className="flex justify-evenly items-center my-5 md:my-0 md:space-x-5 md:mr-5">
-            <li>
-              <a href={twitter} target="_blank" rel="noreferrer">
-                <FaXTwitter className="text-lg dark:text-white hover:scale-110 transition" />
-              </a>
-            </li>
-            <li>
-              <a href={linkdein} target="_blank" rel="noreferrer">
-                <FaLinkedinIn className="text-lg dark:text-white hover:scale-110 transition" />
-              </a>
-            </li>
-            <li>
-              <a href={github} target="_blank" rel="noreferrer">
-                <FaGithub className="text-xl dark:text-white hover:scale-110 transition" />
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <div className="md:hidden px-6 pt-3 pb-6 bg-[#F7F5EE] dark:bg-[#121214] border-b border-stone-200 dark:border-white/10 shadow-xl animate-fadeIn">
+          <ul className="flex flex-col space-y-4 font-medium text-base text-[#57534E] dark:text-[#A1A1AA]">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <button
+                  onClick={() => scrollToSection(item.id)}
+                  className="w-full text-left py-2 hover:text-[#1E1E1E] dark:hover:text-white transition-colors"
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 }
 
 export default Header;
+
