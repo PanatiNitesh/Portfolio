@@ -59,8 +59,8 @@ const About = () => {
             />
 
             <div className="absolute inset-0
-              bg-gradient-to-t from-[#FDFBF7] via-[#FDFBF7]/20 to-transparent
-              lg:bg-gradient-to-r lg:from-transparent lg:to-[#FDFBF7]
+              bg-gradient-to-t from-white via-white/20 to-transparent
+              lg:bg-gradient-to-r lg:from-transparent lg:to-white
               dark:bg-gradient-to-t dark:from-[#18181B] dark:via-transparent dark:to-transparent
               lg:dark:bg-gradient-to-r lg:dark:from-transparent lg:dark:to-[#18181B]">
             </div>
@@ -68,35 +68,35 @@ const About = () => {
             {/* Status Overlay */}
             <div className="absolute bottom-6 left-6 p-3 md:p-4
               backdrop-blur-xl
-              bg-[#FDFBF7]/90 dark:bg-black/60
+              bg-white/90 dark:bg-black/60
               rounded-2xl
-              border border-stone-300/80 dark:border-white/10
+              border border-slate-200 dark:border-white/10
               flex items-center gap-2 md:gap-3
               shadow-lg">
-              <div className="w-2.5 h-2.5 rounded-full bg-[#6B7E63] animate-pulse shadow-[0_0_10px_rgba(107,126,99,0.8)]"></div>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-mono font-bold text-stone-700 dark:text-stone-300">Active Innovator</span>
+              <div className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse shadow-[0_0_10px_rgba(37,99,235,0.8)]"></div>
+              <span className="text-[10px] uppercase tracking-[0.2em] font-mono font-bold text-slate-700 dark:text-stone-300">Active Innovator</span>
             </div>
           </div>
 
           {/* Right: Content Area */}
           <div className="lg:w-3/5 p-8 md:p-14 lg:p-16 flex flex-col justify-center space-y-8
-            bg-[#FDFBF7] dark:bg-[#18181B]">
+            bg-white dark:bg-[#18181B]">
 
             <div className="space-y-4">
-              <div className="flex items-center gap-3 text-[#6B7E63] dark:text-[#8BA87E]">
+              <div className="flex items-center gap-3 text-blue-600 dark:text-blue-400">
                 <Sparkles size={16} />
                 <span className="uppercase tracking-[0.3em] font-mono text-[10px] font-bold">About Me</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-[#1E1E1E] dark:text-[#FAFAFA]">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-[#111827] dark:text-[#FAFAFA]">
                 Where innovation
-                <span className="block text-stone-400 dark:text-stone-500 italic font-normal text-3xl md:text-4xl lg:text-5xl mt-1">
+                <span className="block text-slate-400 dark:text-stone-500 italic font-normal text-3xl md:text-4xl lg:text-5xl mt-1">
                   meets full-stack execution
                 </span>
               </h1>
             </div>
 
-            <p className="text-stone-600 dark:text-stone-300 text-base md:text-lg leading-relaxed font-light max-w-2xl
-              border-l-2 border-[#6B7E63]/40 dark:border-[#8BA87E]/30 pl-5">
+            <p className="text-slate-600 dark:text-stone-300 text-base md:text-lg leading-relaxed font-light max-w-2xl
+              border-l-2 border-blue-500/40 dark:border-blue-400/30 pl-5">
               {personalDetails.about}
             </p>
 

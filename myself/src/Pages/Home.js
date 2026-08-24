@@ -223,17 +223,18 @@ function Home() {
         <div className="lg:col-span-6 flex justify-center items-center">
           <div className="relative group w-full max-w-lg">
             
-            {/* Ambient Backlight Glow */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500/15 via-indigo-200/20 to-purple-500/15 dark:from-blue-500/15 dark:via-purple-500/15 dark:to-blue-500/15 rounded-[3rem] blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-700" />
+            {/* Luminous Multi-Color Ambient Backlight Glow */}
+            <div className="absolute -inset-5 bg-gradient-to-tr from-blue-600/35 via-indigo-500/30 to-purple-600/35 dark:from-blue-500/30 dark:via-purple-500/25 dark:to-indigo-500/30 rounded-[3.5rem] blur-3xl opacity-85 group-hover:opacity-100 transition-opacity duration-700 animate-pulse [animation-duration:4s]" />
+            <div className="absolute -inset-2 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-[3rem] blur-xl opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
 
             {/* Floating Top Badge */}
-            <div className="absolute -top-3.5 right-6 z-30 flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/95 dark:bg-[#1E1E22]/90 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-md">
+            <div className="absolute -top-3.5 right-6 z-30 flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/95 dark:bg-[#1E1E22]/90 backdrop-blur-md border border-slate-200 dark:border-white/10 shadow-lg">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
               <span className="font-mono text-[10px] font-semibold text-slate-700 dark:text-stone-300">Available to Build</span>
             </div>
 
             {/* Main Rounded Terminal Container */}
-            <div className="relative w-full rounded-[2.5rem] bg-white dark:bg-[#16161A] border-2 border-slate-200/90 dark:border-white/10 shadow-2xl overflow-hidden transition-all duration-500 group-hover:border-slate-300 dark:group-hover:border-white/20">
+            <div className="relative w-full rounded-[2.5rem] bg-white dark:bg-[#16161A] border-2 border-slate-200/90 dark:border-white/10 shadow-2xl overflow-hidden transition-all duration-500 group-hover:border-blue-400/60 dark:group-hover:border-blue-400/40 group-hover:shadow-[0_20px_50px_rgba(37,99,235,0.15)]">
               
               {/* Terminal Window Header Bar */}
               <div className="flex items-center justify-between px-6 py-4 bg-slate-100/90 dark:bg-[#1A1A20] border-b border-slate-200/80 dark:border-white/5">
