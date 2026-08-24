@@ -63,24 +63,24 @@ function App() {
     <Router>
       <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
 
-      <div className="transition-colors duration-300 bg-[#F7F5EE] dark:bg-[#121214] text-[#1E1E1E] dark:text-[#FAFAFA] min-h-screen selection:bg-[#6B7E63]/20 dark:selection:bg-[#8BA87E]/30">
+      <div className="transition-colors duration-300 bg-[#F8F9FA] dark:bg-[#121214] text-[#111827] dark:text-[#FAFAFA] min-h-screen selection:bg-blue-500/20 dark:selection:bg-blue-400/30">
         <section id="home" className="min-h-screen flex items-center pt-20">
           <Home />
         </section>
 
-        <section id="about" className="reveal-section py-20 border-t border-stone-200/70 dark:border-white/5">
+        <section id="about" className="reveal-section py-20 border-t border-slate-200/80 dark:border-white/5">
           <About />
         </section>
 
-        <section id="technologies" className="reveal-section py-20 border-t border-stone-200/70 dark:border-white/5">
+        <section id="technologies" className="reveal-section py-20 border-t border-slate-200/80 dark:border-white/5">
           <Technologies />
         </section>
 
-        <section id="projects" className="reveal-section py-20 border-t border-stone-200/70 dark:border-white/5">
+        <section id="projects" className="reveal-section py-20 border-t border-slate-200/80 dark:border-white/5">
           <Projects />
         </section>
 
-        <section id="contact" className="reveal-section py-20 border-t border-stone-200/70 dark:border-white/5">
+        <section id="contact" className="reveal-section py-20 border-t border-slate-200/80 dark:border-white/5">
           <Contact />
         </section>
       </div>

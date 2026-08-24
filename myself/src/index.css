@@ -6,7 +6,7 @@
 
 :root {
   --nav-height: 80px;
-  --bg-light: #F7F5EE;
+  --bg-light: #F8F9FA;
   --bg-dark: #121214;
 }
 
@@ -18,7 +18,7 @@ body {
   overflow-x: hidden;
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: var(--bg-light);
-  color: #1E1E1E;
+  color: #111827;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 

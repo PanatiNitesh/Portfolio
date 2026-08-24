@@ -27,23 +27,23 @@ function Header({ isDarkMode, setIsDarkMode }) {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#F7F5EE]/85 dark:bg-[#121214]/85 border-b border-stone-200/60 dark:border-white/5 transition-colors duration-300">
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#F8F9FA]/85 dark:bg-[#121214]/85 border-b border-slate-200/80 dark:border-white/5 transition-colors duration-300">
       <div className="container mx-auto max-w-7xl px-6 md:px-12 flex justify-between items-center h-20">
         
-        {/* Left Spacer / Empty brand space */}
+        {/* Left Spacer */}
         <div className="flex-1"></div>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center space-x-8">
-          <ul className="flex items-center space-x-7 font-medium text-sm text-[#57534E] dark:text-[#A1A1AA]">
+          <ul className="flex items-center space-x-7 font-medium text-sm text-slate-600 dark:text-[#A1A1AA]">
             {navItems.map((item) => (
               <li key={item.label}>
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="hover:text-[#1E1E1E] dark:hover:text-white transition-colors duration-200 py-1 relative group"
+                  className="hover:text-[#111827] dark:hover:text-white transition-colors duration-200 py-1 relative group"
                 >
                   {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#1E1E1E] dark:bg-white transition-all duration-300 group-hover:w-full rounded-full" />
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#111827] dark:bg-white transition-all duration-300 group-hover:w-full rounded-full" />
                 </button>
               </li>
             ))}
@@ -53,9 +53,9 @@ function Header({ isDarkMode, setIsDarkMode }) {
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
-            className="p-2.5 rounded-full bg-stone-200/70 hover:bg-stone-300/80 dark:bg-white/10 dark:hover:bg-white/15 text-[#1E1E1E] dark:text-white transition-all duration-200 hover:scale-110 active:scale-95"
+            className="p-2.5 rounded-full bg-slate-200/70 hover:bg-slate-300/80 dark:bg-white/10 dark:hover:bg-white/15 text-[#111827] dark:text-white transition-all duration-200 hover:scale-110 active:scale-95 shadow-sm"
           >
-            {isDarkMode ? <Sun size={17} className="text-amber-400" /> : <Moon size={17} className="text-stone-700" />}
+            {isDarkMode ? <Sun size={17} className="text-amber-400" /> : <Moon size={17} className="text-slate-700" />}
           </button>
         </nav>
 
@@ -64,14 +64,14 @@ function Header({ isDarkMode, setIsDarkMode }) {
           <button
             onClick={toggleTheme}
             aria-label="Toggle Theme"
-            className="p-2 rounded-full bg-stone-200/70 dark:bg-white/10 text-[#1E1E1E] dark:text-white"
+            className="p-2 rounded-full bg-slate-200/70 dark:bg-white/10 text-[#111827] dark:text-white"
           >
-            {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} className="text-stone-700" />}
+            {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} className="text-slate-700" />}
           </button>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-[#1E1E1E] dark:text-white"
+            className="p-2 text-[#111827] dark:text-white"
             aria-label="Toggle Menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -81,13 +81,13 @@ function Header({ isDarkMode, setIsDarkMode }) {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="md:hidden px-6 pt-3 pb-6 bg-[#F7F5EE] dark:bg-[#121214] border-b border-stone-200 dark:border-white/10 shadow-xl animate-fadeIn">
-          <ul className="flex flex-col space-y-4 font-medium text-base text-[#57534E] dark:text-[#A1A1AA]">
+        <div className="md:hidden px-6 pt-3 pb-6 bg-[#F8F9FA] dark:bg-[#121214] border-b border-slate-200 dark:border-white/10 shadow-xl animate-fadeIn">
+          <ul className="flex flex-col space-y-4 font-medium text-base text-slate-600 dark:text-[#A1A1AA]">
             {navItems.map((item) => (
               <li key={item.label}>
                 <button
                   onClick={() => scrollToSection(item.id)}
-                  className="w-full text-left py-2 hover:text-[#1E1E1E] dark:hover:text-white transition-colors"
+                  className="w-full text-left py-2 hover:text-[#111827] dark:hover:text-white transition-colors"
                 >
                   {item.label}
                 </button>
