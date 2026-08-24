@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { personalDetails, socialMediaUrl, contactDetails } from "../Details";
-import { FaGithub, FaLinkedinIn, FaXTwitter, FaInstagram, FaCode, FaReact } from "react-icons/fa6";
-import { ArrowDown, Brain } from "lucide-react";
+import { FaGithub, FaLinkedinIn, FaXTwitter, FaInstagram, FaCode } from "react-icons/fa6";
+import { ArrowDown } from "lucide-react";
 
 // Dynamic Typewriter Roles
 const roles = [
@@ -203,40 +203,25 @@ function Home() {
 
         </div>
 
-        {/* Right 3D Visual Card with Floating Elements */}
+        {/* Right Visual Card */}
         <div className="lg:col-span-5 flex justify-center items-center">
           <div className="relative group w-full max-w-sm sm:max-w-md">
             
             {/* Ambient Backlight Glow */}
-            <div className="absolute -inset-4 bg-gradient-to-tr from-[#6B7E63]/25 via-amber-200/20 to-indigo-500/15 dark:from-[#6B7E63]/20 dark:via-purple-500/15 dark:to-blue-500/15 rounded-[3.5rem] blur-2xl opacity-70 group-hover:opacity-100 transition-opacity duration-700" />
-
-            {/* Floating High-Tech Badge 1 (Top Left) */}
-            <div className="absolute -top-3 -left-3 z-30 flex items-center gap-2 px-3.5 py-1.5 rounded-2xl bg-[#FAF8F5]/90 dark:bg-[#1C1C20]/90 backdrop-blur-md border border-stone-300/80 dark:border-white/10 shadow-lg animate-float-slow">
-              <Brain size={14} className="text-[#6B7E63] dark:text-[#8BA87E]" />
-              <span className="font-mono text-[10px] font-bold text-stone-800 dark:text-stone-200">AI / ML</span>
-            </div>
-
-            {/* Floating High-Tech Badge 2 (Bottom Right) */}
-            <div className="absolute -bottom-3 -right-3 z-30 flex items-center gap-2 px-3.5 py-1.5 rounded-2xl bg-[#FAF8F5]/90 dark:bg-[#1C1C20]/90 backdrop-blur-md border border-stone-300/80 dark:border-white/10 shadow-lg animate-float-slow [animation-delay:2.5s]">
-              <FaReact size={14} className="text-[#00D8FF] animate-spin [animation-duration:10s]" />
-              <span className="font-mono text-[10px] font-bold text-stone-800 dark:text-stone-200">Full-Stack</span>
-            </div>
+            <div className="absolute -inset-4 bg-gradient-to-tr from-[#6B7E63]/20 via-amber-200/15 to-transparent dark:from-[#6B7E63]/15 dark:via-purple-500/10 rounded-[3.5rem] blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
 
             {/* Main Rounded Card */}
-            <div className="relative w-full aspect-[4/5] rounded-[3rem] bg-[#EFEBE0] dark:bg-[#18181C] border-2 border-stone-300/80 dark:border-white/10 shadow-2xl overflow-hidden flex items-end justify-center pt-6 px-4 transition-all duration-500 group-hover:scale-[1.02]">
+            <div className="relative w-full aspect-[4/5] rounded-[3rem] bg-[#EFEBE0] dark:bg-[#18181C] border-2 border-stone-300/80 dark:border-white/10 shadow-2xl overflow-hidden flex items-center justify-center p-8 transition-all duration-500 group-hover:scale-[1.02]">
               
               {/* Subtle background decorative grid pattern in card */}
               <div className="absolute inset-0 bg-[radial-gradient(#1E1E1E_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:18px_18px] opacity-[0.04] dark:opacity-[0.06]" />
               
-              {/* Large Close-up 3D Avatar filling the card cleanly */}
+              {/* Authentic Tom and Jerry Transparent Image */}
               <img
                 src={homeImg}
-                alt="Panati Nitesh"
-                className="w-full h-[95%] object-contain object-bottom animate-float-slow drop-shadow-2xl z-10"
+                alt="Tom and Jerry"
+                className="w-full h-full object-contain animate-float-slow drop-shadow-xl z-10"
               />
-
-              {/* Bottom Card Light Fade */}
-              <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-[#EFEBE0] dark:from-[#18181C] to-transparent pointer-events-none z-20" />
             </div>
           </div>
         </div>

@@ -30,17 +30,8 @@ function Header({ isDarkMode, setIsDarkMode }) {
     <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#F7F5EE]/85 dark:bg-[#121214]/85 border-b border-stone-200/60 dark:border-white/5 transition-colors duration-300">
       <div className="container mx-auto max-w-7xl px-6 md:px-12 flex justify-between items-center h-20">
         
-        {/* Minimalist Monogram Brand Logo */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="group flex items-center gap-2.5 font-mono transition-transform duration-200 hover:scale-105"
-          aria-label="Home"
-        >
-          <div className="w-10 h-10 rounded-2xl bg-[#EFEBE0] dark:bg-white/10 flex items-center justify-center border border-stone-300/80 dark:border-white/10 shadow-sm group-hover:border-[#6B7E63] dark:group-hover:border-[#8BA87E] transition-colors">
-            <span className="text-xs font-black text-[#1E1E1E] dark:text-white tracking-wider">PN</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#6B7E63] dark:bg-[#8BA87E] ml-0.5"></span>
-          </div>
-        </button>
+        {/* Left Spacer / Empty brand space */}
+        <div className="flex-1"></div>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center space-x-8">
