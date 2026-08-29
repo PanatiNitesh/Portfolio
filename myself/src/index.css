@@ -35,11 +35,12 @@ html.dark body {
 
 .cursor-blink {
   display: inline-block;
-  width: 2px;
-  height: 1em;
+  width: 3px;
+  height: 1.1em;
   background-color: currentColor;
-  margin-left: 2px;
-  vertical-align: middle;
+  margin-left: 4px;
+  vertical-align: -0.1em;
+  border-radius: 2px;
   animation: blink 0.9s infinite;
 }
 

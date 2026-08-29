@@ -1,9 +1,10 @@
 import React from "react";
-import { Mail, Instagram, ArrowRight, MessageSquare, Send } from "lucide-react";
+import { Mail, ArrowRight, MessageSquare, Send } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import { contactDetails } from "../Details";
 
 const Contact = () => {
-  const { email, instagram } = contactDetails;
+  const { email, twitter } = contactDetails;
 
   return (
     <main className="min-h-screen bg-transparent pt-12 md:pt-16 pb-12 md:pb-16 px-4 md:px-8 overflow-x-hidden">
@@ -51,25 +52,25 @@ const Contact = () => {
             </div>
           </a>
 
-          {/* Instagram Card */}
+          {/* Twitter / X Card */}
           <a 
-            href={instagram}
+            href={twitter}
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white dark:bg-[#18181B] border border-slate-200/90 dark:border-white/10 hover:border-[#E4405F]/60 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl"
+            className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white dark:bg-[#18181B] border border-slate-200/90 dark:border-white/10 hover:border-slate-800 dark:hover:border-white/40 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl"
           >
             <div className="relative z-10 flex flex-col h-full">
-              <div className="w-14 h-14 rounded-2xl bg-[#F6E8EB] dark:bg-[#E4405F]/10 border border-pink-200 dark:border-[#E4405F]/20 flex items-center justify-center text-[#E4405F] mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Instagram size={24} />
+              <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#111827] dark:text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                <FaXTwitter size={24} />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#111827] dark:text-white">Social Channel</h3>
-              <p className="text-slate-500 dark:text-stone-400 text-xs md:text-sm mb-8">Follow for project updates, hackathon journeys, and tech life.</p>
+              <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#111827] dark:text-white">X (Twitter)</h3>
+              <p className="text-slate-500 dark:text-stone-400 text-xs md:text-sm mb-8">Follow for project updates, tech thoughts, hackathons, and announcements.</p>
               
               <div className="mt-auto flex items-center justify-between gap-2">
-                <span className="text-sm md:text-base font-mono text-slate-800 dark:text-stone-200 group-hover:text-[#E4405F] transition-colors truncate">
-                  @nitesh_reddy_
+                <span className="text-sm md:text-base font-mono text-slate-800 dark:text-stone-200 group-hover:text-[#111827] dark:group-hover:text-white transition-colors truncate">
+                  @Nitesh_Reddy_
                 </span>
-                <div className="w-9 h-9 rounded-full border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-stone-300 group-hover:bg-[#E4405F] group-hover:border-[#E4405F] group-hover:text-white transition-all duration-300 shrink-0">
+                <div className="w-9 h-9 rounded-full border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-stone-300 group-hover:bg-[#111827] dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-black transition-all duration-300 shrink-0">
                    <ArrowRight size={13} />
                 </div>
               </div>

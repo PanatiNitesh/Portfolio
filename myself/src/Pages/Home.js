@@ -13,7 +13,7 @@ const roles = [
 ];
 
 function Home() {
-  const { linkdein, github, twitter, instagram } = socialMediaUrl;
+  const { linkdein, github, twitter, instagram, leetcode } = socialMediaUrl;
   const { email } = contactDetails;
 
   const [roleIndex, setRoleIndex] = useState(0);
@@ -115,11 +115,11 @@ function Home() {
             <FaInstagram size={17} />
           </a>
           <a
-            href="https://leetcode.com/"
+            href={leetcode || "https://leetcode.com/u/Niteshreddydev/"}
             target="_blank"
             rel="noreferrer"
             className="p-2 rounded-full hover:bg-amber-100/60 dark:hover:bg-amber-500/10 hover:text-[#FFA116] hover:-translate-y-0.5 transition-all duration-200"
-            aria-label="Coding Profile"
+            aria-label="LeetCode Profile"
           >
             <FaCode size={17} />
           </a>
@@ -181,7 +181,7 @@ function Home() {
             <span className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-800 dark:text-stone-200 tracking-tight">
               {currentText}
             </span>
-            <span className="cursor-blink text-2xl sm:text-3xl md:text-4xl text-blue-600 dark:text-blue-400 font-light ml-0.5">|</span>
+            <span className="cursor-blink text-blue-600 dark:text-blue-400 text-2xl sm:text-3xl md:text-4xl" aria-hidden="true" />
           </div>
 
           {/* Action Buttons */}
@@ -214,6 +214,9 @@ function Home() {
             </a>
             <a href={instagram} target="_blank" rel="noreferrer" className="hover:text-pink-600" aria-label="Instagram">
               <FaInstagram size={19} />
+            </a>
+            <a href={leetcode || "https://leetcode.com/u/Niteshreddydev/"} target="_blank" rel="noreferrer" className="hover:text-[#FFA116]" aria-label="LeetCode">
+              <FaCode size={19} />
             </a>
           </div>
 

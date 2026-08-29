@@ -56,6 +56,7 @@ export const socialMediaUrl = {
   github: "https://github.com/PanatiNitesh/",
   twitter: "https://x.com/Nitesh_Reddy_",
   instagram: "https://www.instagram.com/nitesh_reddy_/",
+  leetcode: "https://leetcode.com/u/Niteshreddydev/",
 };
 
 // Work Experience / Career Milestones
@@ -243,6 +244,7 @@ export const projectDetails = [
 // Contact Info
 export const contactDetails = {
   email: "niteshreddy242005@gmail.com",
+  twitter: "https://x.com/Nitesh_Reddy_",
   instagram: "https://www.instagram.com/nitesh_reddy_/",
 };
 
