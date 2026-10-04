@@ -142,9 +142,9 @@ function Technologies() {
 
       {/* --- HEADER SECTION --- */}
       <div className="container mx-auto max-w-5xl text-center mb-16 md:mb-20">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-[#111827] dark:text-white mb-4">
+        <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-[#111827] dark:text-white mb-4">
           Skills & Technologies
-        </h1>
+        </h2>
         <p className="text-slate-600 dark:text-stone-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
           The languages, frameworks, and developer tools I leverage to build production-grade software and intelligent applications.
         </p>

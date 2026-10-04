@@ -17,7 +17,8 @@ import {
   Layers,
   Terminal,
   ExternalLink,
-  Trophy
+  Trophy,
+  Users
 } from "lucide-react";
 
 const About = () => {
@@ -87,12 +88,12 @@ const About = () => {
                 <Sparkles size={16} />
                 <span className="uppercase tracking-[0.3em] font-mono text-[10px] font-bold">About Me</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-[#111827] dark:text-[#FAFAFA]">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-[#111827] dark:text-[#FAFAFA]">
                 Where innovation
                 <span className="block text-slate-400 dark:text-stone-500 italic font-normal text-3xl md:text-4xl lg:text-5xl mt-1">
                   meets full-stack execution
                 </span>
-              </h1>
+              </h2>
             </div>
 
             <p className="text-slate-600 dark:text-stone-300 text-base md:text-lg leading-relaxed font-light max-w-2xl
@@ -154,6 +155,7 @@ const About = () => {
                     {work.Type === "Achievement" ? <Trophy size={12} className="text-purple-600 dark:text-purple-400" /> : <Briefcase size={12} className="text-blue-600 dark:text-blue-400" />}
                     {work.Type || "Experience"}
                   </span>
+
                   <h3 className="text-2xl md:text-3xl font-bold text-[#111827] dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors tracking-tight">
                     {work.Position}
                   </h3>

@@ -42,7 +42,7 @@ export const logos = {
 
 // Personal Details
 export const personalDetails = {
-  name: "",
+  name: "Panati Nitesh",
   tagline: "Where innovation meets full-stack execution",
   homeImg,
   aboutImg,
@@ -66,13 +66,16 @@ export const workDetails = [
     Company: "Meta × PyTorch × Scaler Hackathon 2026",
     Location: "Scaler School of Technology, Bengaluru",
     Type: "Achievement",
+    Team: "codexcreators",
+    TeamRole: "Member",
     Duration: "2026",
     Desc: [
-      "Selected among the finalist teams to compete in the 48-hour Grand Finale at Scaler School of Technology, Bengaluru.",
+      "Competed as an active member of team codexcreators in the intensive 48-hour Grand Finale at Scaler School of Technology, Bengaluru.",
       "Engineered and deployed deep learning models using PyTorch framework under intensive hackathon conditions.",
-      "Collaborated on real-time problem solving and presented solution architecture to industry mentors from Meta & Scaler."
+      "Collaborated with team codexcreators on real-time problem solving and presented solution architecture to industry mentors from Meta & Scaler."
     ],
     Tags: [
+      "Team codexcreators",
       "Meta × PyTorch",
       "AI / Deep Learning",
       "Hackathon Finalist",
@@ -85,13 +88,16 @@ export const workDetails = [
     Company: "QUANT-A-THON '26",
     Location: "India (National Level)",
     Type: "Achievement",
+    Team: "codexcreators",
+    TeamRole: "Member",
     Duration: "2026",
     Desc: [
-      "Secured 2nd Place by delivering an AI-powered solution.",
+      "Secured 2nd Place representing team codexcreators by delivering an AI-powered solution.",
       "Architected intelligent algorithms to deliver high-accuracy quantitative analysis and decision intelligence.",
-      "Engineered end-to-end scalable prototype tailored for predictive analytics."
+      "Engineered end-to-end scalable prototype tailored for predictive analytics with team codexcreators."
     ],
     Tags: [
+      "Team codexcreators",
       "AI Solution",
       "Quantitative Analytics",
       "Machine Learning",
@@ -103,13 +109,17 @@ export const workDetails = [
     Company: "Smart India Hackathon",
     Location: "India (National Level)",
     Type: "Achievement",
+    Team: "codexcreators",
+    TeamRole: "Member",
     Duration: "2025",
     Desc: [
-      "Contributed to the development of a role-based, real-time education governance platform for centralized academic and administrative data management.",
+      "Represented and won Smart India Hackathon with team codexcreators, developing a role-based, real-time education governance platform for centralized academic and administrative data management.",
       "Built interactive dashboards using Chart.js to visualize attendance trends, CGPA distribution, and department-level performance metrics.",
-      "Implemented role-based access control for students, faculty, and administrators to ensure secure and relevant data visibility."
+      "Implemented role-based access control for students, faculty, and administrators with team codexcreators to ensure secure and relevant data visibility."
     ],
     Tags: [
+      "Team codexcreators",
+      "Smart India Hackathon",
       "Problem Solving",
       "Web Application Development",
       "Data Visualization",

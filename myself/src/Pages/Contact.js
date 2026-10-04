@@ -15,9 +15,9 @@ const Contact = () => {
           <span className="text-blue-600 dark:text-blue-400 font-mono tracking-[0.3em] uppercase text-[10px] font-bold block">
             Let's Talk
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold text-[#111827] dark:text-white tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-bold text-[#111827] dark:text-white tracking-tight">
             Get in Touch
-          </h1>
+          </h2>
           <p className="text-slate-600 dark:text-stone-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto pt-2 px-2">
             Whether you have an opportunity, a technical collaboration, or simply want to connect, my inbox is always open.
           </p>
