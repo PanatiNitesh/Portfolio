@@ -1,10 +1,11 @@
 import React from "react";
 import { Mail, ArrowRight, MessageSquare, Send } from "lucide-react";
-import { FaXTwitter } from "react-icons/fa6";
-import { contactDetails } from "../Details";
+import { FaXTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import { contactDetails, socialMediaUrl } from "../Details";
 
 const Contact = () => {
-  const { email, twitter } = contactDetails;
+  const { email } = contactDetails;
+  const { linkdein, github, twitter } = socialMediaUrl;
 
   return (
     <main className="min-h-screen bg-transparent pt-12 md:pt-16 pb-12 md:pb-16 px-4 md:px-8 overflow-x-hidden">
@@ -19,7 +20,7 @@ const Contact = () => {
             Get in Touch
           </h2>
           <p className="text-slate-600 dark:text-stone-400 text-sm md:text-base leading-relaxed max-w-xl mx-auto pt-2 px-2">
-            Whether you have an opportunity, a technical collaboration, or simply want to connect, my inbox is always open.
+            Whether you have an opportunity, a technical collaboration, or simply want to connect, I'm always open to connecting.
           </p>
         </div>
         <div className="w-12 h-1 bg-blue-600 dark:bg-blue-400 mx-auto rounded-full mt-6"></div>
@@ -28,6 +29,56 @@ const Contact = () => {
       {/* --- CONTACT GRID --- */}
       <section className="container mx-auto max-w-5xl px-2 md:px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+          {/* LinkedIn Card */}
+          <a 
+            href={linkdein}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white dark:bg-[#18181B] border border-slate-200/90 dark:border-white/10 hover:border-[#0A66C2] dark:hover:border-[#0A66C2]/60 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl"
+          >
+            <div className="relative z-10 flex flex-col h-full">
+              <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#0A66C2] dark:text-[#3880c9] mb-6 group-hover:scale-110 transition-transform duration-300">
+                <FaLinkedinIn size={24} />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#111827] dark:text-white">LinkedIn</h3>
+              <p className="text-slate-500 dark:text-stone-400 text-xs md:text-sm mb-8">Connect professionally, follow hackathon achievements, and explore career collaborations.</p>
+              
+              <div className="mt-auto flex items-center justify-between gap-2">
+                <span className="text-sm md:text-base font-mono text-slate-800 dark:text-stone-200 group-hover:text-[#0A66C2] dark:group-hover:text-[#3880c9] transition-colors truncate">
+                  in/nitesh-reddy-dev
+                </span>
+                <div className="w-9 h-9 rounded-full border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-stone-300 group-hover:bg-[#0A66C2] group-hover:border-[#0A66C2] group-hover:text-white transition-all duration-300 shrink-0">
+                   <ArrowRight size={13} />
+                </div>
+              </div>
+            </div>
+          </a>
+
+          {/* GitHub Card */}
+          <a 
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative p-8 md:p-10 rounded-[2.5rem] bg-white dark:bg-[#18181B] border border-slate-200/90 dark:border-white/10 hover:border-slate-800 dark:hover:border-white/40 transition-all duration-500 overflow-hidden shadow-sm hover:shadow-xl"
+          >
+            <div className="relative z-10 flex flex-col h-full">
+              <div className="w-14 h-14 rounded-2xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-[#111827] dark:text-white mb-6 group-hover:scale-110 transition-transform duration-300">
+                <FaGithub size={24} />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#111827] dark:text-white">GitHub</h3>
+              <p className="text-slate-500 dark:text-stone-400 text-xs md:text-sm mb-8">Inspect open-source repositories, AI pipelines, SIH winning code, and prototypes.</p>
+              
+              <div className="mt-auto flex items-center justify-between gap-2">
+                <span className="text-sm md:text-base font-mono text-slate-800 dark:text-stone-200 group-hover:text-[#111827] dark:group-hover:text-white transition-colors truncate">
+                  github.com/PanatiNitesh
+                </span>
+                <div className="w-9 h-9 rounded-full border border-slate-300 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-stone-300 group-hover:bg-[#111827] dark:group-hover:bg-white group-hover:text-white dark:group-hover:text-black transition-all duration-300 shrink-0">
+                   <ArrowRight size={13} />
+                </div>
+              </div>
+            </div>
+          </a>
           
           {/* Email Card */}
           <a 
@@ -39,7 +90,7 @@ const Contact = () => {
                 <Mail size={24} />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2 text-[#111827] dark:text-white">Direct Email</h3>
-              <p className="text-slate-500 dark:text-stone-400 text-xs md:text-sm mb-8">Available for software engineering roles & exciting collaborations.</p>
+              <p className="text-slate-500 dark:text-stone-400 text-xs md:text-sm mb-8">Available for software engineering roles, hackathons, and direct outreach.</p>
               
               <div className="mt-auto flex items-center justify-between gap-2">
                 <span className="text-sm md:text-base font-mono text-slate-800 dark:text-stone-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
