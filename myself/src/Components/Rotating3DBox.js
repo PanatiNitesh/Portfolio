@@ -163,7 +163,7 @@ function Rotating3DBox() {
 interface SoftwareArchitect {
   name: "Panati Nitesh";
   role: "Full-Stack & AI Engineer";
-  team: "codexcreators";
+  team: "codeXcreators";
   coreStack: ["React", "PyTorch", "Node.js", "MongoDB", "TypeScript"];
   specialty: "AI Architecture & Scalable Web Systems";
   status: "Available to Build 🚀";
@@ -171,14 +171,14 @@ interface SoftwareArchitect {
     } else if (activeFaceIndex === 1) {
       snippet = `// Major Hackathons & Honors
 {
-  "team": "codexcreators (Active Member)",
+  "team": "codeXcreators (Active Member)",
   "smart_india_hackathon_2025": "1st Place Winner 🏆",
   "meta_pytorch_scaler_2026": "Grand Finalist (Top National Teams)",
   "quant_a_thon_2026": "Runner-Up 🥈 (Quantitative AI)",
   "internship": "Full-Stack Developer Intern @ JB Portals"
 }`;
     } else if (activeFaceIndex === 2) {
-      snippet = `$ npx codexcreators build --prod
+      snippet = `$ npx codeXcreators build --prod
 ✔ Initializing PyTorch AI deep learning engine... [LOADED]
 ✔ Real-time WebSockets & collaborative APIs... [ONLINE]
 ✔ Role-based centralized governance (SIH 2025)... [DEPLOYED]
@@ -186,7 +186,7 @@ interface SoftwareArchitect {
     } else if (activeFaceIndex === 3) {
       snippet = `// Verified Impact & Stats
 - 3+ National Hackathon Victories & Finalist Titles
-- Member of Team Codexcreators
+- Member of Team codeXcreators
 - 9.1 CGPA (Diploma CSE) | 8.45 CGPA (B.E CSE Data Science)
 - 6+ Deployed Full-Stack & AI Applications`;
     } else {
@@ -288,7 +288,7 @@ interface SoftwareArchitect {
               </p>
               <p className="pl-4">
                 <span className="text-blue-600 dark:text-blue-400">team</span>:{" "}
-                <span className="text-emerald-600 dark:text-emerald-400 font-bold">"codexcreators"</span>;
+                <span className="text-emerald-600 dark:text-emerald-400 font-bold">"codeXcreators"</span>;
               </p>
               <p className="pl-4">
                 <span className="text-blue-600 dark:text-blue-400">coreStack</span>: [
@@ -326,12 +326,12 @@ interface SoftwareArchitect {
           />
           <div className="p-6 font-mono text-xs sm:text-[13px] leading-relaxed overflow-x-auto flex-grow flex flex-col justify-center text-left">
             <div className="space-y-1">
-              <p className="text-slate-400 dark:text-stone-500">{"// National Hackathons & Team Codexcreators"}</p>
+              <p className="text-slate-400 dark:text-stone-500">{"// National Hackathons & Team codeXcreators"}</p>
               <p>{"{"}</p>
               <p className="pl-4 flex items-center gap-1.5">
                 <span className="text-blue-600 dark:text-blue-300">"team"</span>:{" "}
                 <span className="text-emerald-600 dark:text-emerald-400 font-bold">
-                  "codexcreators"
+                  "codeXcreators"
                 </span>
                 ,
               </p>
@@ -373,7 +373,7 @@ interface SoftwareArchitect {
             copied={copied}
           />
           <div className="p-6 font-mono text-xs sm:text-[13px] leading-relaxed overflow-x-auto flex-grow flex flex-col justify-center text-left space-y-2">
-            <p className="text-slate-500 dark:text-stone-400">$ npx codexcreators build --prod</p>
+            <p className="text-slate-500 dark:text-stone-400">$ npx codeXcreators build --prod</p>
             <p className="text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
               <Sparkles size={13} className="shrink-0" />
               <span>Initializing PyTorch AI engine... [LOADED]</span>
@@ -418,7 +418,7 @@ interface SoftwareArchitect {
               </div>
               <div className="p-3.5 rounded-2xl bg-slate-50 dark:bg-white/[0.04] border border-slate-200 dark:border-white/5">
                 <span className="text-base font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
-                  <Users size={14} /> codexcreators
+                  <Users size={14} /> codeXcreators
                 </span>
                 <span className="text-[11px] text-slate-600 dark:text-stone-400 font-medium">Core Member</span>
               </div>
@@ -508,7 +508,7 @@ interface SoftwareArchitect {
                 <span>QUANT-A-THON '26: Runner-Up 🥈</span>
               </p>
               <p className="text-slate-600 dark:text-stone-300 pt-2 text-[11px]">
-                Active Member of Team Codexcreators • Building Impactful Products
+                Active Member of Team codeXcreators • Building Impactful Products
               </p>
             </div>
           </div>

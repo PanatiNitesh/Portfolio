@@ -9,7 +9,7 @@ const roles = [
   "AI & Deep Learning",
   "Full-Stack Web Architect",
   "SIH 2025 Winner",
-  "Team Codexcreators Member",
+  "Team codeXcreators Member",
   "PyTorch & Machine Learning",
   "Data Science Specialist"
 ];
