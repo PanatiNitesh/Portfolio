@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://panatinitesh.dev
+Host: https://niteshreddydev.vercel.app
 
 # Sitemaps
-Sitemap: https://panatinitesh.dev/sitemap.xml
+Sitemap: https://niteshreddydev.vercel.app/sitemap.xml
