@@ -17,8 +17,7 @@ import {
   Layers,
   Terminal,
   ExternalLink,
-  Trophy,
-  Users
+  Trophy
 } from "lucide-react";
 
 const About = () => {

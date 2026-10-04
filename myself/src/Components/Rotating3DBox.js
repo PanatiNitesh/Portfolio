@@ -74,7 +74,7 @@ const ROTATION_SEQUENCE = [
 ];
 
 function Rotating3DBox() {
-  const [seqIndex, setSeqIndex] = useState(0);
+  const seqIndexRef = useRef(0);
   const [activeFaceIndex, setActiveFaceIndex] = useState(0);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
@@ -91,13 +91,10 @@ function Rotating3DBox() {
     if (isHovered || isDragging) return;
 
     const timer = setInterval(() => {
-      setSeqIndex((prev) => {
-        const next = (prev + 1) % ROTATION_SEQUENCE.length;
-        const target = ROTATION_SEQUENCE[next];
-        setRotation(target.rot);
-        setActiveFaceIndex(target.faceIndex);
-        return next;
-      });
+      seqIndexRef.current = (seqIndexRef.current + 1) % ROTATION_SEQUENCE.length;
+      const target = ROTATION_SEQUENCE[seqIndexRef.current];
+      setRotation(target.rot);
+      setActiveFaceIndex(target.faceIndex);
     }, 4000);
 
     return () => clearInterval(timer);
