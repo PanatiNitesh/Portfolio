@@ -42,7 +42,7 @@ export const logos = {
 
 // Personal Details
 export const personalDetails = {
-  name: "Panati Nitesh",
+  name: "Panate Nitesh",
   tagline: "Where innovation meets full-stack execution",
   homeImg,
   aboutImg,

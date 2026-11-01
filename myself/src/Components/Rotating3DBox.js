@@ -161,7 +161,7 @@ function Rotating3DBox() {
     if (activeFaceIndex === 0) {
       snippet = `// TypeScript Architecture
 interface SoftwareArchitect {
-  name: "Panati Nitesh";
+  name: "Panate Nitesh";
   role: "Full-Stack & AI Engineer";
   team: "codeXcreators";
   coreStack: ["React", "PyTorch", "Node.js", "MongoDB", "TypeScript"];
@@ -182,7 +182,7 @@ interface SoftwareArchitect {
 ✔ Initializing PyTorch AI deep learning engine... [LOADED]
 ✔ Real-time WebSockets & collaborative APIs... [ONLINE]
 ✔ Role-based centralized governance (SIH 2025)... [DEPLOYED]
-➜ System Online: Panati Nitesh portfolio operational.`;
+➜ System Online: Panate Nitesh portfolio operational.`;
     } else if (activeFaceIndex === 3) {
       snippet = `// Verified Impact & Stats
 - 3+ National Hackathon Victories & Finalist Titles
@@ -281,7 +281,7 @@ interface SoftwareArchitect {
                 <span>{"{"}</span>
               </p>
               <p className="pl-4">
-                <span className="text-blue-600 dark:text-blue-400">name</span>: <span className="text-amber-600 dark:text-amber-300">"Panati Nitesh"</span>;
+                <span className="text-blue-600 dark:text-blue-400">name</span>: <span className="text-amber-600 dark:text-amber-300">"Panate Nitesh"</span>;
               </p>
               <p className="pl-4">
                 <span className="text-blue-600 dark:text-blue-400">role</span>: <span className="text-amber-600 dark:text-amber-300">"Full-Stack & AI Engineer"</span>;
@@ -387,7 +387,7 @@ interface SoftwareArchitect {
               <span>Education governance (SIH 2025)... [DEPLOYED]</span>
             </p>
             <p className="text-slate-800 dark:text-stone-200 pt-1">
-              ➜ <span className="text-blue-600 dark:text-blue-400 font-bold">System Online:</span> Panati Nitesh portfolio operational.
+              ➜ <span className="text-blue-600 dark:text-blue-400 font-bold">System Online:</span> Panate Nitesh portfolio operational.
             </p>
             <p className="text-slate-400 dark:text-stone-500 text-[11px]">
               ➜ SEO: 1000/10 • Lighthouse: 100/100

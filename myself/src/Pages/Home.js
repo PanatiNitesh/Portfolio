@@ -150,9 +150,9 @@ function Home() {
             </span>
           </div>
 
-          {/* Headline (Panati Nitesh.) - Single semantic h1 for 1000/10 SEO */}
+          {/* Headline (Panate Nitesh.) - Single semantic h1 for 1000/10 SEO */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-[#111827] dark:text-[#FAFAFA] leading-[1.03] space-y-1">
-            <span className="block">Panati</span>
+            <span className="block">Panate</span>
             <span className="flex items-baseline">
               <span>Nitesh</span>
               <span className="text-blue-600 dark:text-blue-400 ml-1">.</span>
